@@ -1,0 +1,1164 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    title Bouncy
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    link(rel='stylesheet', href='css/main.min.css')
+  body
+
+    // WRAPPER
+    .wrapper
+
+      // PRELOADER
+      .loader
+        .loader-inner
+
+      // HEADER
+      header.header(data-parallax="scroll" data-image-src="img/header/bg.jpg")#header
+        
+        .navbar
+          .container
+            .row.align-items-center
+              .col-lg-2.col-md-4.col-sm-6.col-6
+                a.logo(href="javascript:void(0);") Bouncy
+              .col-lg-10.col-md-8.col-sm-6.col-6.align-items-center
+                button.sandwich-menu
+                  .sw.sw-topper
+                  .sw.sw-middle
+                  .sw.sw-bottom
+                nav.nav
+                  ul.nav-list.justify-content-end
+                    li.nav-list__item.active
+                      a.nav-list__link(href="#header") Hello
+                    li.nav-list__item
+                      a.nav-list__link(href="#about") About
+                    li.nav-list__item
+                      a.nav-list__link(href="#services") Services
+                    li.nav-list__item
+                      a.nav-list__link(href="#portfolio") Portfolio
+                    li.nav-list__item
+                      a.nav-list__link(href="#team") Team
+                    li.nav-list__item
+                      a.nav-list__link(href="#blog") Blog
+                    li.nav-list__item
+                      a.nav-list__link(href="#contact") Contact
+
+        .header-composition
+          .container
+            .row
+              .col-xl-6.offset-xl-3.col-lg-8.offset-lg-2.col-md-10.offset-md-1.col-sm-12.offset-sm-0
+                h1.main-title.wow.fadeInDown We are code cafe 
+                .header-composition__text
+                  p.wow.fadeInUp.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+
+        a.down-anchor(href="#about")
+          i.fi.flaticon-down-arrow
+
+
+      // MAIN-CONTENT
+      main.main-content
+
+        // ABOUT
+        section.about#about
+          .container
+            .row
+              .col-md-5.col-sm-12.order-md-1
+                img.wow.zoomIn.about-img(src="img/about/ipad.png", alt="Ipad")
+              .col-lg-5.offset-lg-2.col-md-6.offset-md-1.col-sm-12.offset-sm-0.order-md-0
+                h2.h2.wow.fadeInUp This is bouncy
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                .about-btn.wow.fadeInUp
+                  a.button(href="javascript:void(0);") Read More
+
+        // FEATURES
+        section.features
+
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.h2.wow.fadeInUp Details about bouncy
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+
+            .row.justify-content-center
+              .col-12
+                .tabs
+                  .tab.wow.rollIn
+                    i.fi.flaticon-like
+                  .tab.wow.rollIn
+                    i.fi.flaticon-computer
+                  .tab.wow.rollIn
+                    i.fi.flaticon-technology
+
+            .tab-content.wow.fadeInUp
+              .tab-item
+                .row
+                  .col-12.offset-sm-1.col-sm-11.offset-0.col-12
+                    h4.h4 We love our work
+                .row
+                  .offset-md-1.col-md-3.offset-sm-1.col-sm-5.offset-0.col-12
+                    p
+                      | At 
+                      strong.strong.accent-color vero
+                      |  eos et accusamus et iusto odio dignissimos 
+                      strong.strong ducimus
+                      |  qui blanditiis praesentium voluptatum deleniti atque corrupti.
+                  .offset-md-1.col-md-6.offset-sm-0.col-sm-6.offset-0.col-12
+                    p
+                      | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum |  deleniti atque 
+                      strong.strong corrupti quos 
+                      |  dolores et quas molestias 
+                      strong.strong.accent-color excepturi 
+                      |   sint occaecati cupiditate non provident, 
+                      strong.strong similique 
+                      |   sunt in | culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem r
+
+              .tab-item
+                .row
+                  .col-12.offset-lg-1.col-lg-11
+                    h4.h4 Great technicals
+                .row
+                  .offset-lg-1.col-lg-3
+                   p
+                      | At 
+                      strong.strong.accent-color vero
+                      |  eos et accusamus et iusto odio dignissimos 
+                      strong.strong ducimus
+                      |  qui blanditiis praesentium voluptatum deleniti atque corrupti.
+                  .offset-lg-1.col-lg-6
+                    p
+                      | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum |  deleniti atque 
+                      strong.strong corrupti quos 
+                      |  dolores et quas molestias 
+                      strong.strong.accent-color excepturi 
+                      |   sint occaecati cupiditate non provident, 
+                      strong.strong similique 
+                      |   sunt in | culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem r
+
+              .tab-item
+                .row
+                  .col-12.offset-lg-1.col-lg-11
+                    h4.h4 Creative ideas
+                .row
+                  .offset-lg-1.col-lg-3
+                    p
+                      | At 
+                      strong.strong.accent-color vero
+                      |  eos et accusamus et iusto odio dignissimos 
+                      strong.strong ducimus
+                      |  qui blanditiis praesentium voluptatum deleniti atque corrupti.
+                  .offset-lg-1.col-lg-6
+                    p
+                      | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum |  deleniti atque 
+                      strong.strong corrupti quos 
+                      |  dolores et quas molestias 
+                      strong.strong.accent-color excepturi 
+                      |   sint occaecati cupiditate non provident, 
+                      strong.strong similique 
+                      |   sunt in | culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem r
+        
+        // WORKS
+        section.works
+          
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.wow.fadeInUp.h2 Featured projects
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+
+          .row.no-gutters
+            .col-lg-6.col-md-12.col-sm-12
+              a.wow.zoomIn.works-item.works-item-1(href="javascript:void(0);", style="background-image: url(img/works/1.jpg)")
+                i.fi.flaticon-add
+                .works-title Whiskey
+            .col-lg-3.col-md-6.col-sm-12
+              a.wow.zoomIn.works-item.works-item-2(href="javascript:void(0);", style="background-image: url(img/works/2.jpg)")
+                i.fi.flaticon-add
+                .works-title Vintage
+            .col-lg-3.col-md-6.col-sm-12
+              a.wow.zoomIn.works-item.works-item-3(href="javascript:void(0);", style="background-image: url(img/works/3.jpg)")
+                i.fi.flaticon-add
+                .works-title Branding
+          
+          .works-bottom(style="background-image: url(img/works/bottom-bg.jpg)")
+            .container
+              .row
+                .col-lg-9.col-md-12
+                  .works-bottom__text.wow.fadeInUp
+                    | At vero eos et 
+                    strong.strong accusamus 
+                    |  et iusto odio dignissimos ducimus qui blanditiis 
+                .col-lg-3.col-md-12
+                  a.wow.fadeInUp.button.works-btn.button--white(href="javascript:void(0);") Submit Now
+
+        // SERVICES
+        section.services#services
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.wow.fadeInUp.h2 Our services
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            .row.align-items-center
+              .offset-xl-1.col-xl-5.offset-lg-0.col-lg-6.offset-md-2.col-md-8.offset-sm-2.col-sm-9.offset-0.col-12
+                .services-left
+                  ul.menu-icons
+                    li.wow.fadeIn.menu-icons__item
+                      .menu__icon
+                        i.fi.flaticon-wrench
+
+                    li.wow.fadeIn.menu-icons__item
+                      .menu__icon
+                        i.fi.flaticon-paint-roller
+
+                    li.wow.fadeIn.menu-icons__item
+                      .menu__icon
+                        i.fi.flaticon-game
+
+                    li.wow.fadeIn.menu-icons__item
+                      .menu__icon
+                        i.fi.flaticon-plug
+
+                  .services-text
+                    h4.wow.fadeInUp.h4 Graphic Design
+                    p.wow.fadeIn
+                      | Lorem ipsum dolor sit amet, 
+                      strong.strong.accent-color consectetur 
+                      |  adipisicing elit. Voluptatum 
+                      strong.strong assumenda quo 
+                      |  sequi eum voluptates perferendis.
+                    p.wow.fadeIn
+                      | quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+                      strong.strong.accent-color similique sunt 
+                      |  in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+
+              .offset-xl-1.col-xl-5.offset-lg-0.col-lg-6.col-md-12.col-sm-12.col-12
+                .services-right
+                  ul.skills
+                    li.wow.zoomIn.skills__item
+
+                      .progress.progress-item-1
+                        .percentage 
+                          |80
+                          span.percentage-icon %
+                        span.progress-left
+                          span.progress-bar
+                        span.progress-right
+                          span.progress-bar
+
+                      .skill__name Branding
+
+                    li.wow.zoomIn.skills__item
+
+                      .progress.progress-item-2
+                        .percentage 
+                          |75
+                          span.percentage-icon %
+                        span.progress-left
+                          span.progress-bar
+                        span.progress-right
+                          span.progress-bar
+                      
+                      .skill__name Web Design
+
+                    li.wow.zoomIn.skills__item
+
+                      .progress.progress-item-3
+                        .percentage 
+                          |60
+                          span.percentage-icon %
+                        span.progress-left
+                          span.progress-bar
+                        span.progress-right
+                          span.progress-bar
+
+                      .skill__name UI/UX
+
+        // QUOTES
+        section.quotes
+          .quotes-background(style="background-image: url(img/quotes/bg.jpg)")
+
+          .container
+            .row
+              .offset-lg-0.col-lg-6.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+                h2.wow.fadeInUp.h2.h2--white Impressed ?
+                .quotes-text.wow.fadeInUp
+                  p.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+                  .quotes-author
+                    cite.quotes-author__name - Abdullah Noman
+                    .quotes-author__job 
+                    | Creative director, 
+                    span.accent-color Code cafe
+              .offset-lg-1.col-lg-5.offset-md-0.col-md-6.d-none.d-lg-block
+                img.quotes-img(src="img/quotes/monitor.png", alt="Quotes Image")
+
+        // PORTFOLIO
+        section.portfolio#portfolio
+
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.wow.fadeInUp.h2 The portfolio
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            .row
+              .offset-lg-3.col-lg-6
+                ul.portfolio-tabs
+                  li.portfolio-tab.wow.fadeIn All Works
+                  li.portfolio-tab.wow.fadeIn Print
+                  li.portfolio-tab.wow.fadeIn Identity
+                  li.portfolio-tab.wow.fadeIn Branding
+                  li.portfolio-tab.wow.fadeIn Web
+                  li.portfolio-tab.wow.fadeIn HTML
+                  li.portfolio-tab.wow.fadeIn Wordpress
+
+          .portfolio-content
+            .portfolio-item
+              a.portfolio-work.work-1(href="javascript:void(0);", style="background-image: url(img/portfolio/1.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-2(href="javascript:void(0);", style="background-image: url(img/portfolio/2.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-3(href="javascript:void(0);", style="background-image: url(img/portfolio/3.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-4(href="javascript:void(0);", style="background-image: url(img/portfolio/4.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-5(href="javascript:void(0);", style="background-image: url(img/portfolio/5.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-6(href="javascript:void(0);", style="background-image: url(img/portfolio/6.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-7(href="javascript:void(0);", style="background-image: url(img/portfolio/7.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-8(href="javascript:void(0);", style="background-image: url(img/portfolio/8.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-9(href="javascript:void(0);", style="background-image: url(img/portfolio/9.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-10(href="javascript:void(0);", style="background-image: url(img/portfolio/10.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-11(href="javascript:void(0);", style="background-image: url(img/portfolio/11.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-12(href="javascript:void(0);", style="background-image: url(img/portfolio/12.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+
+            .portfolio-item
+              a.portfolio-work.work-2(href="javascript:void(0);", style="background-image: url(img/portfolio/2.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-3(href="javascript:void(0);", style="background-image: url(img/portfolio/3.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-4(href="javascript:void(0);", style="background-image: url(img/portfolio/4.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+
+            .portfolio-item
+              a.portfolio-work.work-7(href="javascript:void(0);", style="background-image: url(img/portfolio/7.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-10(href="javascript:void(0);", style="background-image: url(img/portfolio/10.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-11(href="javascript:void(0);", style="background-image: url(img/portfolio/11.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+            .portfolio-item
+              a.portfolio-work.work-4(href="javascript:void(0);", style="background-image: url(img/portfolio/4.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-7(href="javascript:void(0);", style="background-image: url(img/portfolio/7.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-8(href="javascript:void(0);", style="background-image: url(img/portfolio/8.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-9(href="javascript:void(0);", style="background-image: url(img/portfolio/9.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+            .portfolio-item
+              a.portfolio-work.work-1(href="javascript:void(0);", style="background-image: url(img/portfolio/1.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-2(href="javascript:void(0);", style="background-image: url(img/portfolio/2.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-3(href="javascript:void(0);", style="background-image: url(img/portfolio/3.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-4(href="javascript:void(0);", style="background-image: url(img/portfolio/4.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-5(href="javascript:void(0);", style="background-image: url(img/portfolio/5.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-6(href="javascript:void(0);", style="background-image: url(img/portfolio/6.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-7(href="javascript:void(0);", style="background-image: url(img/portfolio/7.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+            .portfolio-item
+              a.portfolio-work.work-11(href="javascript:void(0);", style="background-image: url(img/portfolio/11.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-12(href="javascript:void(0);", style="background-image: url(img/portfolio/12.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+            .portfolio-item
+              a.portfolio-work.work-5(href="javascript:void(0);", style="background-image: url(img/portfolio/5.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-6(href="javascript:void(0);", style="background-image: url(img/portfolio/6.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-7(href="javascript:void(0);", style="background-image: url(img/portfolio/7.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-8(href="javascript:void(0);", style="background-image: url(img/portfolio/8.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, alias voluptates a quas, accusamus quam.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+              a.portfolio-work.work-9(href="javascript:void(0);", style="background-image: url(img/portfolio/9.jpg)")
+                .portfolio-overlay
+                  .portfolio-title Title here
+                  .portfolio-text
+                    p.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  ul.portfolio-icons
+                      li.portfolio-icons__item
+                        i.fi.flaticon-link
+                      li.portfolio-icons__item  
+                        i.fi.flaticon-like
+
+          .portfolio-bottom(style="background-image: url(img/portfolio/bottom-bg.jpg)")
+            .row
+              .offset-lg-1.col-lg-10.offset-md-0.col-md-12
+                .portfolio-bottom__text.wow.fadeInDown
+                  p
+                    | At vero eos et 
+                    strong.strong accusamus 
+                    |  et iusto odio 
+                    strong.strong dignissimos 
+                    |  ducimus qui blanditiis 
+                a.wow.fadeInUp.button.button--white(href="javascript:void(0);") Start Project
+
+        // TEAM
+        section.team#team
+
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.wow.fadeInUp.h2 The team
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+
+            .team-carousel.accent-carousel
+              .team-carousel__item.team-item--1
+                .row.align-items-center
+                  .offset-lg-1.col-lg-3.offset-md-0.col-md-4.col-sm-5.col-12
+                    .team__photo.wow.fadeIn(style="background-image: url(img/team/1.jpg)")
+                      ul.socials.team-socials
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-instagram-social-network-logo-of-photo-camera
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-facebook-letter-logo
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-twitter-logo-silhouette
+                  .offset-lg-3.col-lg-4.offset-md-2.col-md-5.offset-sm-0.col-sm-7.col-12
+                    .team-info
+                      .team-info__basic
+                        .team-info__name.wow.fadeInDown Abdullah Noman
+                        .team-info__position.wow.fadeInUp Creative Director, Code cafe
+                      .team-info__text.wow.fadeIn
+                        p.
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, magnam quasi voluptas veniam et qui aliquam aperiam eius quibusdam ut, assumenda vero quam earum nobis dolor, neque ab eum. Minus.
+                      ul.team-skills
+                        li.team-skills__item.wow.fadeIn
+                          .team-skills__info
+                            .team-skills__info-left Branding
+                            .team-skills__info-right 80 %
+                          .team-skills__progress
+                        li.team-skills__item.wow.fadeIn
+                          .team-skills__info
+                            .team-skills__info-left Web Design
+                            .team-skills__info-right 65 %
+                          .team-skills__progress
+                        li.team-skills__item.wow.fadeIn
+                          .team-skills__info
+                            .team-skills__info-left User interface
+                            .team-skills__info-right 75 %
+                          .team-skills__progress
+              .team-carousel__item.team-item--2
+                .row.align-items-center
+                  .offset-lg-1.col-lg-3.offset-md-0.col-md-4.col-sm-5.col-12
+                    .team__photo(style="background-image: url(img/team/2.jpg)")
+                      ul.socials.team-socials
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-instagram-social-network-logo-of-photo-camera
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-facebook-letter-logo
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-twitter-logo-silhouette
+                  .offset-lg-3.col-lg-4.offset-md-2.col-md-5.offset-sm-0.col-sm-7.col-12
+                    .team-info
+                      .team-info__basic
+                        .team-info__name Normana Mer
+                        .team-info__position Frontend developer
+                      .team-info__text
+                        p.
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur voluptatum perspiciatis qui, possimus magni ea.
+                      ul.team-skills
+                        li.team-skills__item
+                          .team-skills__info
+                            .team-skills__info-left HTML
+                            .team-skills__info-right 90 %
+                          .team-skills__progress
+                        li.team-skills__item
+                          .team-skills__info
+                            .team-skills__info-left CSS
+                            .team-skills__info-right 85 %
+                          .team-skills__progress
+                        li.team-skills__item
+                          .team-skills__info
+                            .team-skills__info-left JS
+                            .team-skills__info-right 75 %
+                          .team-skills__progress
+              .team-carousel__item.team-item--3
+                .row.align-items-center
+                  .offset-lg-1.col-lg-3.offset-md-0.col-md-4.col-sm-5.col-12
+                    .team__photo(style="background-image: url(img/team/3.jpg)")
+                      ul.socials.team-socials
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-instagram-social-network-logo-of-photo-camera
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-facebook-letter-logo
+                        li.socials__item
+                          a.socials__link(href="javascript:void(0);")
+                            i.fi.flaticon-twitter-logo-silhouette
+
+                  .offset-lg-3.col-lg-4.offset-md-2.col-md-5.offset-sm-0.col-sm-7.col-12
+                    .team-info
+                      .team-info__basic
+                        .team-info__name Alexandr Gumarev
+                        .team-info__position Backend developer
+                      .team-info__text
+                        p.
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptas natus, iusto rerum nisi cupiditate officiis quae dicta esse itaque. Consequatur, temporibus, recusandae!
+                      ul.team-skills
+                        li.team-skills__item
+                          .team-skills__info
+                            .team-skills__info-left PHP
+                            .team-skills__info-right 85 %
+                          .team-skills__progress
+                        li.team-skills__item
+                          .team-skills__info
+                            .team-skills__info-left Python
+                            .team-skills__info-right 65 %
+                          .team-skills__progress
+                        li.team-skills__item
+                          .team-skills__info
+                            .team-skills__info-left Wordpress
+                            .team-skills__info-right 95 %
+                          .team-skills__progress
+            
+          .team-bottom(style="background-image: url(img/team/bottom-bg.jpg)")
+            .row
+              .offset-lg-1.col-lg-10.offset-md-0.col-md-12
+                .team-bottom__text.wow.fadeInDown
+                  p Already Love Us? Let's talk!
+
+                a.button.wow.fadeInUp(href="javascript:void(0);") Contact Us
+
+        // TESTIMONIALS
+        section.testimonials
+
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.wow.fadeInUp.h2 Testimonials
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+
+            .testis.accent-carousel
+              .testi
+                .row
+                  .offset-lg-1.col-lg-2.offset-md-0.col-md-3.col-sm-12
+                    .testi__photo.wow.zoomIn(style="background-image: url(img/testimonials/1.jpg)")
+                  .col-lg-8.col-md-9.col-sm-12
+                    blockquote.testi__text.wow.fadeIn
+                      p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia laboriosam accusamus incidunt, quisquam eveniet dignissimos necessitatibus, minima earum, cum soluta dolore impedit eius nam veniam. Laudantium alias praesentium illum, nihil.
+                    .testi__man
+                      cite.testi__name.wow.zoomIn Partho
+                      .test__position.wow.fadeInRight.
+                        Founder, Artways BD
+              .testi
+                .row
+                  .offset-lg-1.col-lg-2.offset-md-0.col-md-3.col-sm-12
+                    .testi__photo.wow.zoomIn(style="background-image: url(img/testimonials/2.jpg)")
+                  .col-lg-8.col-md-9.col-sm-12
+                    blockquote.testi__text.wow.fadeIn
+                      p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia laboriosam accusamus incidunt, quisquam eveniet dignissimos necessitatibus, minima earum, cum soluta dolore impedit eius nam veniam. Laudantium alias praesentium illum, nihil.
+                    .testi__man
+                      cite.testi__name.wow.zoomIn Gennadiy
+                      .test__position.wow.fadeInRight.
+                        Art-Designer
+              .testi
+                .row
+                  .offset-lg-1.col-lg-2.offset-md-0.col-md-3.col-sm-12
+                    .testi__photo.wow.zoomIn(style="background-image: url(img/testimonials/3.jpg)")
+                  .col-lg-8.col-md-9.col-sm-12
+                    blockquote.testi__text.wow.fadeIn
+                      p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia laboriosam accusamus incidunt, quisquam eveniet dignissimos necessitatibus, minima earum, cum soluta dolore impedit eius nam veniam. Laudantium alias praesentium illum, nihil.
+                    .testi__man
+                      cite.testi__name.wow.zoomIn Angella
+                      .test__position.wow.fadeInRight.
+                        Creative Director
+
+        // BLOG
+        section.blog#blog
+
+          .blog-shadow(style="background-image: url(img/blog/shadow.png)")
+          .gray-bg(style="background-image: url(img/blog/bg.jpg)")
+
+          .container
+            .row
+              .offset-lg-0.col-lg-5.offset-md-0.col-md-6.offset-sm-2.col-sm-8
+                .section-header.blog-header
+                  h2.wow.fadeInLeft.h2.h2--white Latest news
+                  p.wow.fadeInRight.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            
+            .blogs.accent-carousel
+              .blogs__item
+                 .row
+                  .offset-lg-1.col-lg-6.offset-md-1.col-md-8.offset-sm-0.col-sm-9.col-12
+                    header.blogs-header
+                      h3.wow.fadeIn.blogs__title The trending Landing Pages
+                      cite.wow.fadeIn.blogs__author 
+                        a.wow.fadeIn.blogs__author-name(href="javascrypt:void(0);")
+                          | by 
+                          span.accent-color Kabir Uddin
+                      a.wow.fadeIn(href="javascript:void(0);").blogs__actions 6950 Likes - 243 Comments - 703 shares
+
+                    .blogs__text.wow.fadeIn
+                      p.
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio... 
+
+                    a.wow.fadeIn.blogs__link(href="javascript:void(0);") + Read More
+
+              .blogs__item
+                 .row
+                  .offset-lg-1.col-lg-6.offset-md-1.col-md-8.offset-sm-0.col-sm-9.col-12
+                    header.blogs-header
+                      h3.wow.fadeIn.blogs__title Teaching of frontend development
+                      cite.wow.fadeIn.blogs__author
+                        a.blogs__author-name(href="javascrypt:void(0);")
+                          | by 
+                          span.accent-color Eliza Therner
+                      a(href="javascript:void(0);").wow.fadeIn.blogs__actions 8452 Likes - 653 Comments - 490 shares
+
+                    .blogs__text.wow.fadeIn
+                      p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ad quis, dignissimos incidunt accusamus atque nobis cupiditate iure fugit? Doloremque, dolore. Quidem accusantium odio, ab molestiae est rerum facilis.
+
+                    a.wow.fadeIn.blogs__link(href="javascript:void(0);") + Read More
+
+              .blogs__item
+                 .row
+                  .offset-lg-1.col-lg-6.offset-md-1.col-md-8.offset-sm-0.col-sm-9.col-12
+                    header.blogs-header
+                      h3.wow.fadeIn.blogs__title Programming microcontrollers
+                      cite.wow.fadeIn.blogs__author 
+                        a.wow.fadeIn.blogs__author-name(href="javascrypt:void(0);")
+                          | by 
+                          span.accent-color James Frand
+                      a(href="javascript:void(0);").wow.fadeIn.blogs__actions 10203 Likes - 700 Comments - 903 shares
+
+                    .blogs__text.wow.fadeIn
+                      p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatibus blanditiis recusandae impedit, id fugit, harum sapiente maiores deserunt ab quam, molestiae doloribus non. Perferendis accusamus reiciendis, enim obcaecati, veniam minus amet voluptatum maiores eius voluptatibus natus impedit est commodi sit nihil odio.
+
+                    a.blogs__link.wow.fadeIn(href="javascript:void(0);") + Read More
+           
+        // PRICE
+        section.price
+
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.wow.fadeInUp.h2 Our price
+                p.wow.fadeInUp.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            .row
+              .col-md-4.col-sm-6.col-12
+                .price-item.wow.rotateIn.price-item-1
+                  header.price-item__header Premium
+                  .price-item__body
+                    .price__number $ 60
+                      .price__period Per Month
+                  .price-item__hover
+                    ul.price-list
+                      li.price-list__item Full Branding
+                      li.price-list__item Project Management
+                      li.price-list__item Unlimited Revisions
+                      li.price-list__item 24/7 h Service
+                      li.price-list__item Free Domain
+                      li.price-list__item Free Hosting
+                    a.price-button(href="javascript:void(0);") Let's Start
+              .col-md-4.col-sm-6.col-12
+                .price-item.wow.rotateIn.price-item-2
+                  header.price-item__header Competetive
+                  .price-item__body
+                    .price__number $ 75
+                      .price__period Per Month
+                  .price-item__hover
+                    ul.price-list
+                      li.price-list__item Full Branding
+                      li.price-list__item Project Management
+                      li.price-list__item Unlimited Revisions
+                      li.price-list__item 24/7 h Service
+                      li.price-list__item Free Domain
+                      li.price-list__item Free Hosting
+                    a.price-button(href="javascript:void(0);") Let's Start
+              .col-md-4.col-sm-12.col-12
+                .price-item.wow.rotateIn.price-item-3
+                  header.price-item__header Exclusive
+                  .price-item__body
+                    .price__number $ 80
+                      .price__period Per Month
+                  .price-item__hover
+                    ul.price-list
+                      li.price-list__item Full Branding
+                      li.price-list__item Project Management
+                      li.price-list__item Unlimited Revisions
+                      li.price-list__item 24/7 h Service
+                      li.price-list__item Free Domain
+                      li.price-list__item Free Hosting
+                    a.price-button(href="javascript:void(0);") Let's Start
+
+        // SUBSCRIBE
+        section.subscribe
+
+          .gray-bg.subscribe-bg(style="background-image: url(img/subscribe/bg.jpg)")
+
+          .container
+            .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+              .section-header
+                h2.h2.h2--white Subscribe us
+                p.
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            .row
+              .col-12
+                form.subscribe-form
+                  input(type="text" name="email" placeholder="Email Address").subscribe-form__item
+                  button(type="submit").subscribe-button.button Submit
+
+        // CONTACT
+        section.contact#contact
+
+
+          .contact-top
+            .container
+              .row.col-lg-6.offset-lg-3.offset-md-2.col-md-8.offset-sm-0.col-sm-12
+                .section-header
+                  h2.h2 Contact us
+                  p.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+              .row
+                .col-md-4.col-sm-12.contact-gutter
+                  .contact-item
+                    .contact-item__img(style="background-image: url(img/contact/1.jpg)")
+                      i.fi.flaticon-message
+                    .contact-item__body
+                      h5.contact-item__title Email
+                      a.contact-link(href="mailto:Hello@codecafe.com") Hello@codecafe.com
+                      a.contact-link(href="mailto:Personal@codecafe.com") Personal@codecafe.com
+                .col-md-4.col-sm-12.contact-gutter
+                  .contact-item
+                    .contact-item__img(style="background-image: url(img/contact/2.jpg)")
+                      i.fi.flaticon-location-pointer
+                    .contact-item__body
+                      h5.contact-item__title Our Office
+                      a.contact-link(href="javascript:void(0);") 240, bhatikhana, 8200 barisal bangladesh
+                .col-md-4.col-sm-12.contact-gutter
+                  .contact-item
+                    .contact-item__img(style="background-image: url(img/contact/3.jpg)")
+                      i.fi.flaticon-phone-call
+                    .contact-item__body
+                      h5.contact-item__title Phone
+                      a.contact-link(href="tel:+0011699644") +00 11 66 99 66 44
+                      a.contact-link(href="tel:11996644065") 11 99 66 44 065
+
+          .contact-bottom
+            .container
+              .row
+                .offset-lg-1.col-lg-10.offset-md-0.col-md-12.col-sm-12
+                  form.contact-form
+                    .contact-form__head
+                      input.contact-form__item(type="text", name="name", placeholder="Your name")
+                      input.contact-form__item(type="text", name="email", placeholder="Email address")
+                      input.contact-form__item(type="text", name="subject", placeholder="Subject")
+                    textarea.contact-form__item.contact-form__textarea(name="message")
+                    button(type="submit").button.contact-button Submit now
+
+        // MAP
+        section.map
+
+          .map__geo#map__geo
+          .map__overlay
+            | Find us on the map
+            .map__icon
+              .fi.flaticon-down-arrow
+          
+
+    // FOOTER
+    footer.footer
+
+      .container
+        .row
+          .offset-md-4.col-md-4.offset-sm-2.col-sm-8.offset-0.col-12
+            a.logo.footer-logo(href="javascript:void(0);") Bouncy
+            .copyright.
+              Copyright 2018. All rights Reserved
+            ul.socials.footer-socials
+              li.socials__item
+                a.socials__link.facebook-link(href="javascript:void(0);")
+                  i.fi.flaticon-facebook-letter-logo
+              li.socials__item
+                a.socials__link.twitter-link(href="javascript:void(0);")
+                  i.fi.flaticon-twitter-logo-silhouette
+              li.socials__item
+                a.socials__link.linkedin-link(href="javascript:void(0);")
+                  i.fi.flaticon-linkedin-logo
+              li.socials__item
+                a.socials__link.instagram-link(href="javascript:void(0);")
+                  i.fi.flaticon-instagram-social-network-logo-of-photo-camera
+              li.socials__item
+                a.socials__link.vimeo-link(href="javascript:void(0);")
+                  i.fi.flaticon-vimeo-logo
+
+    // scripts
+    script.
+      var scr = {"scripts":[
+      {"src" : "js/scripts.min.js", "async" : false},
+      {"src" : "https://maps.googleapis.com/maps/api/js?key=AIzaSyArqm-Ywkp0r0ZRF2GAoCbSmLcCz-Gx3Cs&callback=initMap", "async" : false},
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+

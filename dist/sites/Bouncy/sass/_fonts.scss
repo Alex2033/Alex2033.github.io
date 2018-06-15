@@ -1,0 +1,50 @@
+ @font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/flaticon/Flaticon.eot");
+  src: url("../fonts/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/flaticon/Flaticon.woff") format("woff"),
+       url("../fonts/flaticon/Flaticon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-vimeo-logo:before { content: "\f100"; }
+.flaticon-instagram-social-network-logo-of-photo-camera:before { content: "\f101"; }
+.flaticon-linkedin-logo:before { content: "\f102"; }
+.flaticon-twitter-logo-silhouette:before { content: "\f103"; }
+.flaticon-facebook-letter-logo:before { content: "\f104"; }
+.flaticon-phone-call:before { content: "\f105"; }
+.flaticon-location-pointer:before { content: "\f106"; }
+.flaticon-message:before { content: "\f107"; }
+.flaticon-add:before { content: "\f108"; }
+.flaticon-link:before { content: "\f109"; }
+.flaticon-plug:before { content: "\f10a"; }
+.flaticon-game:before { content: "\f10b"; }
+.flaticon-paint-roller:before { content: "\f10c"; }
+.flaticon-wrench:before { content: "\f10d"; }
+.flaticon-technology:before { content: "\f10e"; }
+.flaticon-computer:before { content: "\f10f"; }
+.flaticon-like:before { content: "\f110"; }
+.flaticon-down-arrow:before { content: "\f111"; }

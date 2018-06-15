@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 148 26.000031"
+   height="26.000031"
+   width="148"
+   id="svg2"
+   version="1.1">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <path
+     id="rect16"
+     d="M 60,0 V 25.999999 H 88 V 0 Z m 12.427734,6.421875 h 3.146484 v 13.158203 h -3.146484 z"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
+  <path
+     id="rect18"
+     d="M 30,0 V 25.999999 H 57 V 0 Z m 8.203125,6.765625 h 5.205078 c 3.280792,0 5.167969,1.550001 5.167969,4.257812 -10e-7,1.995229 -0.951705,3.401646 -2.65625,4.042969 l 2.876953,4.169922 H 46.341796 L 43.99414,15.458984 c -0.183284,0.01782 -0.384325,0.01758 -0.585937,0.01758 h -3.042969 v 3.759766 h -2.162109 z m 2.162109,1.888672 v 4.933593 h 3.042969 c 1.979472,0 3.115234,-0.819337 3.115234,-2.511718 0,-1.638939 -1.135762,-2.421875 -3.115234,-2.421875 z"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
+  <path
+     id="rect20"
+     d="M 0,0 V 25.999999 H 27 V 0 Z m 13.638672,6.521484 c 3.672816,0 6.519531,2.739353 6.519531,6.322266 0,3.582913 -2.846715,6.359375 -6.519531,6.359375 -3.6728167,0 -6.5214845,-2.776462 -6.5214845,-6.359375 0,-3.600828 2.8486678,-6.322266 6.5214845,-6.322266 z m 0.01758,1.898438 c -2.425113,0 -4.4296876,1.933704 -4.4296876,4.423828 0,2.490125 2.0221476,4.460937 4.4296876,4.460937 2.407539,0 4.375,-1.970812 4.375,-4.460937 0,-2.490124 -1.967461,-4.423828 -4.375,-4.423828 z"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
+  <path
+     id="rect24"
+     d="m 121,0 v 25.999999 h 27 V 0 Z m 7.88476,6.902343 h 2.14649 l 6.9375,8.763672 V 6.902343 h 2.14648 v 12.195313 h -2.14648 l -6.9004,-8.746094 v 8.746094 h -2.18359 z"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
+  <g
+     id="text28"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.74310493px;line-height:16.634161px;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.66536647"
+     transform="matrix(0.99042899,0,0,1.0096635,-0.15716896,-0.24530133)"
+     aria-label="O" />
+  <g
+     id="text3708"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.06966782px;line-height:16.94031143px;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.67761248"
+     transform="matrix(1.0143212,0,0,0.985881,-0.2948687,-0.10760159)"
+     aria-label="R" />
+  <g
+     id="text3725"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.38934898px;line-height:20.99001503px;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.83960056"
+     transform="matrix(1.1910426,0,0,0.83960054,-0.2948687,-0.10760159)"
+     aria-label="I" />
+  <path
+     id="rect20-3"
+     d="m 91.0001,3e-5 v 26.000001 h 26.99999 V 3e-5 Z m 13.63866,6.521484 c 3.67282,0 6.51953,2.739353 6.51953,6.322266 0,3.582913 -2.84671,6.359375 -6.51953,6.359375 -3.67281,0 -6.521476,-2.776462 -6.521476,-6.359375 0,-3.600828 2.848666,-6.322266 6.521476,-6.322266 z m 0.0176,1.898438 c -2.42511,0 -4.42969,1.933704 -4.42969,4.423828 0,2.490125 2.02215,4.460937 4.42969,4.460937 2.40754,0 4.375,-1.970812 4.375,-4.460937 0,-2.490124 -1.96746,-4.423828 -4.375,-4.423828 z"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1" />
+  <g
+     id="text3748"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.95243263px;line-height:16.83040619px;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.67321628"
+     transform="matrix(1.0304987,0,0,0.97040394,-0.2948687,-0.10760159)"
+     aria-label="N" />
+</svg>

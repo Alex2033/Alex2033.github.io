@@ -1,0 +1,892 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700,800|Open+Sans')
+
+//layout
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "mixins"
+@import "adjustment"
+@import "normalize"
+
+/*===== PRELOADER =====*/
+
+.holder 
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	background-color: #2D2F48
+
+
+.preloader 
+	width: $size + px
+	height: $size + px
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translateX(-50%) translateY(-50%)
+	animation: rotatePreloader $time + s infinite ease-in
+
+@keyframes rotatePreloader 
+	0% 
+	transform: translateX(-50%) translateY(-50%) rotateZ(0deg)
+
+	100% 
+	transform: translateX(-50%) translateY(-50%) rotateZ(-360deg)
+  
+
+.preloader div 
+	position: absolute
+	width: 100%
+	height: 100%
+	opacity: 0
+
+.preloader div:before 
+	content: ""
+	position: absolute
+	left: 50%
+	top: 0%
+	width: 10%
+	height: 10%
+	background-color: $color
+	transform: translateX(-50%)
+	border-radius: 50%
+
+
+@for $i from 1 through $count 
+	.preloader div:nth-child(#{$i}) 
+		transform: rotateZ(((360 / $count) * ($i - 1)) + deg)
+		animation: rotateCircle + $i $time + s infinite linear
+		z-index: $count - $i
+  
+  @keyframes rotateCircle#{$i}
+    #{percentage(((50 / $count) * ($i - 1)) / 100)}
+      opacity: 0
+    #{percentage((((50 / $count) + 0.0001) * ($i - 1)) / 100)}
+      opacity: 1
+      transform: rotateZ((0 - ((360 / $count) * ($i - 2))) + deg)
+    #{percentage((((50 / $count) * ($i - 0)) + 2) / 100)}
+      transform: rotateZ((0 - ((360 / $count) * ($i - 1))) + deg)
+    #{percentage(((50 + ((50 / $count) * ($i - 0))) + 2) / 100)}
+      transform: rotateZ((0 - ((360 / $count) * ($i - 1))) + deg)
+    100% 
+      transform: rotateZ((0 - ((360 / $count) * ($count - 1))) + deg)
+      opacity: 1
+    
+
+
+/*===== HEADER =====*/
+
+.header
+	width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 200
+	padding: 22px 0
+	font-family: $montserrat-font
+
+.header-container
+	display: flex
+	width: 100%
+	justify-content: space-between
+	align-items: center
+
+.logo
+	display: block
+
+.nav-list
+	display: flex
+	justify-content: flex-end
+	flex-wrap: wrap
+	align-items: center
+
+.nav-list__item
+	font-weight: 700
+	text-transform: uppercase
+
+.nav-list__link
+	padding: 0 20px
+	color: #fff
+	transition: .2s
+	&:hover
+		color: lighten($accent, 5%)
+
+.nav-list__btn
+	background-color: $accent
+	border-radius: 6px
+	line-height: 33px
+	.nav-list__link
+		&:hover
+			color: #fff
+			opacity: .8
+
+.toggle-menu
+	display: none
+	background-color: transparent
+	outline: 0
+	width: 40px
+	height: 40px
+	float: right
+	position: relative
+	z-index: 200
+	border: none
+	cursor: pointer
+	span
+		display: block
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 5px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	/*transition-delay: 0.2s, 0s */
+
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	/*transition-delay: 0.2s, 0s */
+
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.sandwich.active
+	.sw-topper
+		top: 10px
+		transform: rotate(45deg)
+	.sw-bottom
+		top: 7px
+		transform: rotate(-45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.popup
+	display: none
+	background-color: $accent
+	width: 440px
+	top: 50px
+	position: relative
+	left: 50%
+	margin-left: -220px
+	position: fixed
+	z-index: 2000
+	padding: 30px 40px
+	box-shadow: 0 0 10px 0 rgba(#000, .7)
+	font-family: $montserrat-font
+
+.popup-exit
+	width: 20px
+	height: 20px
+	background-color: #000
+	border-radius: 50%
+	border: 2px solid #fff
+	cursor: pointer
+	position: absolute
+	right: -10px
+	top: -10px
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	&:active
+		opacity: .9
+
+.popup-exit__topper
+	position: relative
+	transform: rotate(45deg)
+	top: 1px
+
+.popup-exit__footer
+	position: relative
+	transform: rotate(-45deg)
+	bottom: 1px
+
+.popup-exit__sandwich
+	display: block
+	width: 10px
+	height: 2px
+	background-color: #fff
+
+.popup-title
+	color: #fff
+	font-size: rem(22px)
+	line-height: 1.2
+	font-weight: 700
+	text-transform: uppercase
+	margin-bottom: 20px
+
+.popup-form__input
+	display: block
+	width: 100%
+	margin-bottom: 10px
+	border-radius: 2px
+	border: 0
+	padding: 5px 20px
+	box-shadow: 0 0 2px 0 rgba(#000, .4)
+	outline: 0
+
+.popup-btn
+	text-transform: uppercase
+	color: #fff
+	display: block
+	width: 100%
+	background-color: #E95954
+	font-weight: 700
+	cursor: pointer
+	border-radius: 2px
+	border: 0
+	line-height: 40px
+	margin-top: 20px
+	letter-spacing: 1px
+	font-size: rem(17px)
+	box-shadow: 0 0 3px 0 rgba(#000, .4)
+	transition: .2s
+	&:hover
+		background-color: lighten(#E95954, 3%)
+
+.bg-popup
+	display: none
+	position: fixed
+	z-index: 1000
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, .6)
+
+
+/*===== HERO =====*/
+
+.hero
+	height: 100vh
+	min-height: 500px
+	background-color: $gray
+	&:before
+		@extend %pseudo
+		background-color: rgba(#000, .3)
+		z-index: 1
+
+.hero-wrapper
+	position: relative
+	z-index: 2
+	height: 100%
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+
+#controlBar_bgndVideo
+	display: none!important
+
+.hero-content
+	color: #fff
+	text-align: center
+
+.hero-content__img
+	margin-bottom: 60px
+	img
+		margin-left: auto
+		margin-right: auto
+
+.hero-content__header
+	margin-bottom: 60px
+
+.hero-content__text
+	margin-top: -5px
+	p
+		line-height: 1.4
+		font-size: rem(16px)
+
+.hero-content__btns
+	display: flex
+	justify-content: center
+
+.button-left
+	border-radius: 9px 0 0 9px
+	background-color: lighten($accent, 5%)
+	position: relative
+	&:before
+		position: absolute
+		content: 'OR'
+		top: 50%
+		font-size: rem(12px)
+		line-height: 1.2
+		display: flex
+		align-items: center
+		justify-content: center
+		z-index: 1
+		border-radius: 50%
+		margin-top: -14px
+		right: -14px
+		min-width: 28px
+		min-height: 28px
+		background-color: darken($accent, 15%)
+	&:hover
+		background-color: lighten($accent, 10%)
+
+.button-right
+	border-radius: 0 9px 9px 0
+	background-color: darken($accent, 5%)
+	&:hover
+		background-color: darken($accent, 10%)
+
+/*===== SERVICES =====*/
+
+.services
+	padding-top: 30px
+	background-color: $gray
+	border-bottom: 1px solid darken($gray, 5%)
+
+.services-list
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	margin: 0 -20px
+
+.services-list__item
+	text-align: center
+	flex: 0 0 calc(33.3333% - 20px)
+	min-width: 270px
+	margin: 0 10px
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-bottom: 30px
+	
+.services-list__icon
+	width: 100px
+	height: 100px
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 5px
+	background-color: #CADAEC
+	margin-bottom: 10px
+	.svg-inline--fa
+		font-size: rem(38px)
+		color: #fff
+
+.services-list__title
+	color: #555
+	font-size: rem(20px)
+	font-weight: 700
+
+/*===== HOW-SECTION =====*/
+
+.how-section
+	padding-top: 55px
+	padding-bottom: 75px
+	.subtitle-text
+		margin-bottom: 55px
+
+.how-wrapper
+	position: relative
+	padding-top: 10px
+	padding-bottom: 30px
+	margin-bottom: 25px
+
+.time-line
+	position: absolute
+	left: 50%
+	top: 0
+	width: 3px
+	height: 100%
+	background-color: #CCCDD1
+	&:before, &:after
+		content: ''
+		position: absolute
+		left: 0
+		margin-left: -10.5px
+		width: 18px
+		height: 18px
+		border: 3px solid #CCCDD1
+		border-radius: 50%
+	&:before
+		top: 0
+		margin-top: -24px
+	&:after
+		bottom: 0
+		margin-bottom: -24px
+
+
+.how-list__item
+	display: flex
+	width: 100%
+	justify-content: flex-end
+	position: relative
+	margin-bottom: 30px
+	&:last-of-type
+		margin-bottom: 0
+	&:nth-of-type(2n)
+		justify-content: flex-start
+		.how-list__composition
+			border-bottom-color: $pink
+			&:before
+				background-color: $pink
+				left: initial
+				right: -13.5%
+			&:after
+				left: initial
+				right: -18px
+				transform: rotate(180deg)
+
+.how-list__composition
+	width: 45%
+	padding: 20px
+	border: 2px solid #E0E0E0
+	position: relative
+	border-radius: 1px
+	border-bottom: 5px solid $blue
+	&:before
+		content: ''
+		position: absolute
+		width: 13px
+		height: 13px
+		border-radius: 50%
+		background-color: $blue
+		top: 33%
+		margin-top: -6.5px
+		left: -12.7%
+	&:after
+		content: ""
+		position: absolute
+		width: 18px
+		height: 18px
+		top: 33%
+		margin-top: -9px	
+		left: -18px
+		background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='158px' height='188px' viewBox='-10.2493601 0 153.099 202' preserveAspectRatio='xMidYMid meet'  ><rect id='svgEditorBackground' x='100' y='12' width='158' height='188' style='fill: #fff; stroke: none;'/><defs id='svgEditorDefs'><polygon id='svgEditorShapeDefs' style='fill:#fff;stroke:#E0E0E0;stroke-width:0;'/></defs><line id='e2_line' x1='14.042047531992665' y1='88.672760511883' x2='145.33272394881172' y2='13.060329067641685' style='stroke:#E0E0E0;fill:#fff;stroke-width:12px;'/><line id='e1_line' x1='14.2625' y1='90.0238' x2='145.553' y2='14.4114' style='stroke:#E0E0E0;fill:#fff;stroke-width:12px;' transform='matrix(0.462453 0.922501 -0.922501 0.462453 90.5645 33.14)'/></svg>") no-repeat
+		background-size: cover
+	
+.how-list__title
+	font-family: $montserrat-font
+	color: #717171
+	font-weight: 700
+
+.how-list__text
+	font-size: rem(12px)
+
+.how-btns
+	position: absolute
+	bottom: -19px
+	display: flex
+	justify-content: center
+	width: 100%
+	z-index: 1
+
+.alt-button
+	line-height: 38px
+	font-size: 1rem
+	font-family: $montserrat-font
+	background-color: $pink
+	padding: 0 17px
+	display: block
+	font-weight: 700
+	color: #fff
+	outline: 0
+	border-radius: 7px
+	border: 0
+	transition: .2s
+	&:hover
+		opacity: .8
+
+/*===== PORTFOLIO =====*/
+
+.portfolio
+	padding-top: 75px
+	padding-bottom: 60px
+	background-color: $gray
+	.subtitle-text
+		margin-bottom: 50px
+
+.slik-list
+	margin: 0 -10px
+
+.slick-slide
+	margin: 0 10px
+	padding-bottom: -20px
+	outline: 0
+
+.portfolio-list
+	max-width: 720px
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 50px
+	.slick-arrow
+		top: initial
+		bottom: -49px
+		position: absolute
+
+	button.slick-disabled
+		opacity: .75
+		&:hover
+			&:before
+				opacity: 1
+	.slick-next
+		right: 12px
+		&:hover
+			&:before
+				opacity: .75
+		&:before
+			content: '\f0a9'
+			font-family: "FontAwesome"
+			color: #555
+			font-size: rem(24px)
+			opacity: 1
+
+	.slick-prev
+		right: 47px
+		left: initial
+		&:hover
+			&:before
+				opacity: .75
+		&:before
+			content: '\f0a8'
+			font-family: "FontAwesome"
+			color: #555
+			font-size: rem(24px)
+			opacity: 1
+
+.portfolio-list__img
+	display: block
+	outline: 0
+	min-height: 225px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top
+	margin-bottom: 20px
+	position: relative
+	&:last-of-type
+		margin-bottom: 0
+	&:hover
+		.portfolio-bg
+			opacity: 1
+
+.portfolio-bg
+	position: absolute
+	bottom: 13px
+	left: 17px
+	padding: 0 35px
+	color: #fff
+	opacity: 0
+	transition: .2s
+	font-size: rem(15px)
+	line-height: 2
+	background-color: rgba(#000, .65)
+
+
+/*===== TESTIMONIALS =====*/
+.testimonials
+	padding-top: 65px
+	padding-bottom: 50px
+	.subtitle-text
+		margin-bottom: 65px
+
+.testimonials-container
+	max-width: 720px
+	margin-left: auto
+	margin-right: auto
+	width: 100%
+	display: flex
+	justify-content: center
+
+.testimonials__text
+	max-width: 482px
+	padding: 20px 30px
+	border: 2px solid #E0E0E0
+	position: relative
+	margin: 0
+	&:before
+		content: ""
+		position: absolute
+		width: 25px
+		height: 25px
+		top: 52px
+		left: -25px
+		background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18px' height='16px' viewBox='-0.00639854 0 18.0128 16' preserveAspectRatio='xMidYMid meet' ><rect id='svgEditorBackground' x='0' y='3' width='19' height='16' style='fill: #fff; stroke: none;'/><path d='M2.8016453382084094,2.5740402193784284a39.12119509855674,39.12119509855674,0,0,0,15.18098338822778,13.060329067641684' style='fill:#fff;stroke:#E0E0E0;stroke-width:2px;' id='e1_circleArc'/><path d='M3.064895636856663,2.8226691042047563a26.61472471743399,26.61472471743399,0,0,0,14.742230347349176,-0.7020109689213903' style='fill:#fff;stroke:#E0E0E0;stroke-width:2px;' id='e2_circleArc'/></svg>") no-repeat
+		background-size: 25px auto
+
+.testimonials__person
+	color: #000
+	font-size: rem(12px)
+	margin-bottom: 5px
+	display: block
+	font-style: normal
+	font-family: $montserrat-font
+	font-weight: 600
+
+.testimonials__name
+	font-size: rem(18px)
+
+.testimonials__photo
+	width: 80px
+	height: 80px
+	border-radius: 50%
+	margin-right: 38px
+	position: relative
+	top: 8px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.testimonials__blockquote
+	margin: 0
+	font-size: rem(15px)
+	margin-bottom: 10px
+
+/*===== TEAM =====*/
+.team
+	padding-top: 50px
+	padding-bottom: 110px
+	.subtitle-text
+		margin-bottom: 65px
+
+.team-list
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	margin: 0 -20px
+
+	.slick-slide
+		display: flex
+
+	.slick-dots
+		display: flex
+		justify-content: center
+		bottom: -60px
+		li
+			display: flex
+			align-items: center
+			justify-content: center
+			button
+				opacity: .55
+				width: 12px
+				height: 12px
+				border-radius: 50%
+				background-color: $accent
+				&:before
+					display: none
+		.slick-active
+			button
+				opacity: 1
+
+.team-list__item
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin: 0 20px
+	outline: 0
+
+.teammate-photo
+	width: 122px
+	height: 122px
+	border-radius: 50%
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top
+	margin-bottom: 20px
+	position: relative
+	&:before
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #fff
+		top: 50%
+		left: 0
+		margin-left: -21px
+		margin-top: -21px
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		background-color: $accent
+		border: 5px solid #fff
+		font-family: $montserrat-font
+		font-size: rem(16px)
+		font-weight: 600
+
+@for $i from 1 through 15
+	.team-list__item:nth-of-type(#{$i})
+		.teammate-photo
+			&:before
+				content: '#{$i}'
+
+.teammate-name
+	font-size: rem(19px)
+	font-family: $montserrat-font
+	color: #363636
+	font-weight: 600
+
+.teammate-job
+	font-size: rem(12px)
+	margin-bottom: 20px
+
+.teammate-socials
+	display: flex
+	justify-content: center
+
+.teammate-socials__item
+	margin: 0 18px
+
+.teammate-socials__link
+	transition: .2s
+	&:hover
+		opacity: .8
+	.svg-inline--fa
+		font-size: rem(19px)
+
+	.fa-facebook-f
+		color: $accent
+
+	.fa-twitter
+		color: #66C2FF
+
+	.fa-dribbble
+		color: #FF6AAA
+
+/*===== MAP =====*/
+
+.map
+	height: 460px
+
+.map-frame
+	width: 100%
+	height: 100%
+	border: 0
+	filter: grayscale(100%)
+
+.partners
+	padding-top: 35px
+	padding-bottom: 35px
+	background-color: #111
+
+.partners-list
+	display: flex
+	align-items: center
+	justify-content: space-around
+	flex-wrap: wrap
+	margin: 0 -20px -30px
+
+.partners-list__item
+	margin: 0 20px 30px
+
+.partners-list__link
+	display: block
+	max-width: 115px
+	transition: .2s
+	&:hover
+		opacity: .8
+
+.boeing-icon
+	max-width: 230px
+
+/*===== PARTNERS =====*/
+.footer
+	padding-top: 35px
+	padding-bottom: 35px
+	background-color: #000
+
+.footer-wrapper
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.footer-list
+	display: flex
+	min-width: 350px
+	justify-content: space-between
+
+
+.footer-subheader
+	font-weight: 700
+	text-transform: uppercase
+	color: #d7d7d7
+
+.footer-sublist__link
+	color: #d7d7d7
+	transition: .25s opacity
+	&:hover
+		opacity: .8
+
+.subscribe
+	min-width: 350px
+	display: flex
+	flex-direction: column
+	.footer-subheader
+		margin-bottom: 10px
+
+.subscribe-form
+	display: flex
+	margin-bottom: 20px
+
+.subscribe-form__input
+	width: 100%
+	outline: 0
+	padding: 8px 30px
+	background-color: #363636
+	border: 0
+	color: #fff
+
+.subscribe-form__btn
+	line-height: 38px
+	background-color: #555
+	border: 0
+	outline: 0
+	text-transform: uppercase
+	color: #b7b7b7
+	font-weight: 900
+	padding-left: 13px
+	padding-right: 13px
+	cursor: pointer
+	transition: .2s opacity
+	&:hover
+		opacity: .65
+
+@include placeholder
+	opacity: 1
+	color: #5c5c5c
+
+.copyright
+	color: #535353
+	font-weight: 500
+	text-align: right
+	align-self: flex-end
+	.svg-inline--fa
+		color: #C0392B
+
+// media
+@import "media"

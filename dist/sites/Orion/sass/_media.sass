@@ -1,0 +1,202 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// @media (min-width: 1200px)
+
+// @media (max-width: 1199.99px)
+
+@media (min-width: 992px)
+	.nav
+		display: block !important
+
+@media (max-width: 991.99px)
+	.container
+		width: 100%
+		padding-left: 2%
+		padding-right: 2%
+
+	.toggle-menu
+		display: block
+
+	.nav
+		display: none
+		position: absolute
+		top: 100%
+		right: 15px
+		min-width: 190px
+
+	.nav-list
+		display: block
+		margin-right: 0
+
+	.nav-list__item
+		background-color: $accent
+		text-align: right
+		margin-right: 0
+		&:hover, &:focus, &:active
+			background-color: lighten($accent, 15%)
+
+	.nav-list__link
+		width: 100%
+		display: block
+		padding: 10px
+		border-bottom: #222C36 1px solid
+		&:hover, &:focus, &:active
+			color: #fff
+
+	.services-list
+		justify-content: center
+
+	.how-list__composition
+		&:before
+			left: -13%
+
+	.team-list
+		display: block
+
+	.map
+		height: 360px
+
+@media (max-width: 768px)
+
+	.hero-content
+		padding-top: 15%
+
+	.hero-content__img,
+	.hero-content__header
+		margin-bottom: 30px
+
+	.how-list__composition
+		&:before
+			left: -13.3%
+	.how-list__item
+		&:nth-of-type(2n)
+			.how-list__composition
+				&:before
+					right: -14.2%
+
+@media (max-width: 767.99px)
+	.footer-list, .subscribe
+		width: 100%
+
+	.footer-list
+		margin-bottom: 30px	
+		max-width: 480px
+		margin-left: auto
+		margin-right: auto
+
+	.subscribe
+		.footer-subheader
+			text-align: center	
+
+	.copyright
+		margin-left: auto
+		margin-right: auto	
+		text-align: center	
+
+@media (max-width: 650px)
+	.how-list__composition
+		&:before
+			left: -14%
+	.how-list__item
+		&:nth-of-type(2n)
+			.how-list__composition
+				&:before
+					right: -15.2%
+
+	.testimonials-container
+		flex-wrap: wrap
+
+	.testimonials__photo
+		top: 0
+		width: 120px
+		height: 120px
+		margin-right: 0
+		margin-bottom: 30px
+
+	.testimonials__text
+		&:before
+			transform: rotate(90deg)
+			top: 0
+			left: 50%
+			margin-top: -25px
+			margin-left: -40px
+
+	section.map
+		height: 300px
+
+// @media (max-width: 576px)
+
+@media (max-width: 480px)
+	.hero-content__img
+		margin-bottom: 15px
+
+	.title
+		font-size: rem(30px)
+
+	.hero-content__btns
+		.button
+			padding: 10px 25px
+	
+	.portfolio-list
+		.slick-next
+			right: calc(50% - 12px)
+			margin-right: calc(-12px - 4px)
+		.slick-prev
+			right: calc(50% - 12px)
+			margin-right: calc(12px + 4px)
+
+	.time-line
+		left: 10%
+
+
+	.how-list__item
+		display: flex
+		width: 100%
+		justify-content: flex-end
+		position: relative
+		margin-bottom: 30px
+		&:last-of-type
+			margin-bottom: 0
+		&:nth-of-type(2n)
+			justify-content: flex-end
+			.how-list__composition
+				border-bottom-color: $pink
+				&:before
+					background-color: $pink
+					left: -18.5%
+				&:after
+					left: -18px
+					transform: rotate(0deg)
+
+	.how-list__composition
+		width: 78%
+		&:before
+			left: -18.5%
+	
+	.testimonials__text
+		padding: 15px
+
+	.partners-list
+		margin: 0 0 -30px
+	
+	.partners-list__item
+		width: 100%
+		margin: 0
+		margin-bottom: 30px
+
+	.partners-list__link
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+	
+	.footer-list, .subscribe
+		min-width: initial
+		width: 100%
+
+	.popup
+		width: 300px
+		padding: 20px
+		margin-left: -150px

@@ -1,0 +1,248 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	/* TEAM */
+	.team
+		.slick-track
+			margin-bottom: 75px
+
++media-breakpoint-down(md)
+	.tab-item__link
+		width: 33.33%
+
+	/* FOOTER */
+	.created-block
+		p
+			&:last-of-type
+				margin-bottom: 15px
+
++media-breakpoint-down(sm)
+
+	.toggle-menu
+		display: block
+
+	.navigation
+		position: fixed
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+		display: none
+		min-height: 60%
+		background-color: rgba(0,0,0,.9)
+		z-index: 100
+		top: 0
+		right: 0
+		padding-top: 60px
+		text-align: center
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #fff
+			text-transform: uppercase
+			letter-spacing: 5px
+			position: relative
+			height: 100%
+			&:hover
+				color: #fff
+
+	.navigation-list
+		display: block
+	
+	.navigation-list__item
+		padding: 15px 0
+		margin: 0
+		border: 0
+
+	.slick-carousel__content
+		display: flex
+		height: 100%
+		width: 100%
+		justify-content: center
+		align-items: center
+		position: static
+		flex-direction: column
+
+	.title
+		font-size: rem(36px)
+		&:first-line
+			font-size: rem(52px)
+
+	.tab-item__link
+		width: 50%
+
+	/* CONTACT */
+	.contact-social
+		flex-direction: row
+		justify-content: center
+		margin-right: -16px
+
+	.contact-social__item
+		margin-top: 0
+		margin-right: 16px
+		.fa-google-plus-g
+			margin-right: 0
+
+	/* FOOTER */
+	.footer__item
+		text-align: center
+
+	.footer-logo
+		img
+			margin-left: auto
+			margin-right: auto
+
+	.created-block
+		p
+			&:last-of-type
+				margin-bottom: 55px
+
++media-breakpoint-down(xs)
+	main
+		section
+			padding-top: 50px !important
+			padding-bottom: 50px !important
+
+	.home-section
+		min-height: 100vh
+		.slick-dots
+			margin-left: -10px
+
+	.title
+		font-size: rem(20px)
+		&:first-line
+			font-size: rem(40px)
+
+	.slick-carousel__content
+		small
+			font-size: rem(13px)
+
+			&:before
+				left: -10px
+
+			&:after
+				right: -10px
+
+	.features-carousel__item
+		text-align: center
+
+	.features-carousel__icon
+		float: none
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 20px
+		width: 55px
+		height: 55px
+
+		.svg-inline--fa
+			font-size: rem(22px)
+
+	.features-carousel__text
+		margin-left: 0
+
+	.tab-item__link
+		width: 100%
+
+	/* TEAM */
+	.team
+		.subtitle-text
+			margin-bottom: 50px
+		.slick-track
+			margin-bottom: 30px
+
+	/* FACTS */
+	.facts-wrapper
+		padding: 0
+
+	.col-12
+		&:last-of-type
+			.facts__item
+				margin-bottom: 0
+
+	.facts__item-circle
+		margin-bottom: 10px
+
+	/* CONTACT */
+	.contact
+		padding-bottom: 0 !important
+
+	.contact__title
+		text-align: center
+
+	.contact-form__button
+		margin-left: auto
+		margin-right: auto
+
+	/* FOOTER */
+	.footer
+		padding-top: 50px
+		padding-bottom: 50px
+
+	.created-block
+		padding-top: 15px
+		p
+			border: none
+			&:last-of-type
+				margin-bottom: 0
+
+	.copyright
+		border: none
+
+	.footer-logo, .footer__title
+		margin-bottom: 20px
+
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
++media-breakpoint-up(xl)
+
+
+/*==========  Custom needed classes  ==========*/
+.hidden-xs-up 
+  display: none !important
+
+@media (max-width: 575px) 
+	.hidden-xs-down 
+		display: none !important
+  
+@media (min-width: 576px)
+	.hidden-sm-up
+		display: none !important
+
+@media (max-width: 767px) 
+	.hidden-sm-down 
+		display: none !important
+
+@media (min-width: 768px) 
+	.hidden-md-up 
+		display: none !important
+
+	.navigation
+		display: block !important
+
+@media (max-width: 991px) 
+	.hidden-md-down 
+		display: none !important
+
+@media (min-width: 992px) 
+	.hidden-lg-up 
+		display: none !important
+
+@media (max-width: 1199px) 
+	.hidden-lg-down 
+		display: none !important
+  
+@media (min-width: 1200px)
+	.hidden-xl-up
+		display: none !important
+
+	.hidden-xl-down 
+		display: none !important

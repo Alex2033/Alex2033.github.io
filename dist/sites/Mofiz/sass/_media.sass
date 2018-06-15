@@ -1,0 +1,141 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.about-img
+		top: 18px
+
++media-breakpoint-down(md)
+	.toggle-menu
+		display: block
+		float: right
+
+	.nav
+		display: none
+		position: absolute
+		top: 100%
+		margin-top: 5px
+		right: 15px
+		min-width: 190px
+
+	.nav-list
+		display: block
+		margin-right: 0
+
+	.nav-list__item
+		background-color: $main-color
+		text-align: right
+		margin-right: 0
+		.active, &:hover
+			background-color: lighten($main-color, 15%)
+
+	.nav-list__link
+		width: 100%
+		display: block
+		padding: 10px
+		border-bottom: #222C36 1px solid
+
+	.title
+		font-size: rem(46px)
+
+	.about
+		text-align: center
+		.h2
+			text-align: center
+
+	.about-img
+		margin-bottom: 40px
+		top: 0
+		margin-left: auto
+		margin-right: auto
+
+	.services__item-icon
+		margin-left: 15px
+		margin-right: 25px
+
+	.map
+		height: 400px
+
++media-breakpoint-down(sm)
+	main
+		section
+			padding-top: 60px !important
+			padding-bottom: 60px !important
+
+	.title
+		font-size: rem(36px)
+
+	.hero
+		.slick-dots
+			right: 20px
+
+	.services-wrapper
+		margin-bottom: -50px
+
+	.services__item
+		flex-direction: column
+		text-align: center
+		margin-bottom: 50px
+
+	.services__item-icon
+		margin: 0 0 15px
+
+	.contact-form__item
+		margin-bottom: 30px
+
+	.map
+		height: 315px
+
++media-breakpoint-down(xs)
+	.hero-content
+		padding-top: 15%
+
+	.button
+		padding: 10px 35px
+		font-size: rem(14px)
+
+	.hero
+		.slick-dots
+			right: 10px
+
+	.title
+		font-size: rem(28px)
+		margin-bottom: 20px
+
+	.about-text
+		margin-bottom: 20px
+
+	.portfolio__btns
+		margin-top: 30px
+
+	.blog-list__link
+		text-align: center
+
+	.contact-form__area
+		min-height: 180px
+
+	.footer
+		padding-top: 50px
+		padding-bottom: 50px
+		text-align: center
+
+	.map
+		height: 250px
+
+	#scrollUp
+		width: 40px
+		height: 40px
+
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
+	.nav
+		display: block !important
++media-breakpoint-up(xl)

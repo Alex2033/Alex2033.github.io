@@ -1,0 +1,275 @@
+@import "vars"
+
+
+// ≤1200px
++media-breakpoint-down(lg)
+
+// ≤992px
++media-breakpoint-down(md)
+
+	.sandwich-menu
+		display: block
+
+	.nav
+		display: none
+		position: absolute
+		width: 300px
+		top: 100%
+		right: 30px
+		background-color: rgba(#000, .6)
+
+	.nav-list
+		display: block
+		background-color: rgba(#000, .6)
+
+	.nav-list__item
+		border-bottom: 1px solid #5C5C5C
+	
+	.nav-list__item.active
+		.nav-list__link
+			border-color: transparent
+	
+	.nav-list__link
+		padding-top: 6px
+		padding-bottom: 6px
+		display: block
+		transition: background-color .15s
+		border-radius: 0
+		&:hover
+			border-color: transparent
+			background-color: #5C5C5C
+
+	.works-bottom__text
+		margin-bottom: 20px
+
+	.services-text
+		margin-bottom: 50px
+
+	.quotes
+		text-align: center
+		.h2
+			text-align: center
+			margin-bottom: 15px
+
+	.quotes-img
+		top: 0
+
+	.testi__photo
+		margin-left: auto
+		margin-right: auto
+
+	.contact-gutter
+		padding-left: 7.5px
+		padding-right: 7.5px
+
+// ≤768px
++media-breakpoint-down(sm)
+
+	.h2
+		margin-bottom: 15px
+
+	.about
+		text-align: center
+		.h2
+			text-align: center
+
+	.about-img
+		top: 0
+		margin-bottom: 30px
+
+	.portfolio-bottom
+		padding-top: 35px
+		padding-bottom: 35px
+
+	.portfolio-bottom__text
+		p
+			font-size: 1rem
+
+	.testi
+		text-align: center
+
+	.testi__photo
+		margin-bottom: 30px
+
+	.blog-header
+		margin-bottom: 50px
+		text-align: center
+		.h2
+			text-align: center
+
+	.contact-item
+		max-width: 370px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 30px
+
+	.map
+		height: 350px
+
+// ≤576px
++media-breakpoint-down(xs)
+
+	.about, .features, .services,
+	.quotes, .team, .testimonials
+	.blog, .price, .subscribe,
+	.contact-bottom, .footer
+		padding-top: 50px 
+		padding-bottom: 50px 
+
+	.works
+		padding-top: 50px
+
+	.section-header
+		margin-bottom: 15px
+
+	.main-title
+		line-height: 1.4
+		letter-spacing: 3px
+		margin-bottom: 10px
+		font-size: rem(28px)
+
+	.header-composition__text
+		p
+			font-size: 1rem
+
+	.nav
+		width: 200px
+
+	.tabs
+		margin-bottom: 25px
+
+	.h4
+		text-align: center
+
+	.works-bottom__text
+		font-size: rem(16px)
+	
+	.works-bottom
+		padding-top: 20px
+		padding-bottom: 20px
+
+	.services-left
+		align-items: center
+
+	.menu-icons
+		margin-right: 20px
+
+	.skills
+		flex-direction: column
+
+	.skills__item
+		margin-bottom: 30px
+		&:last-of-type
+			margin-bottom: 0
+
+	.progress
+		margin-bottom: 0
+
+	.portfolio
+		padding-top: 50px
+		padding-bottom: 0
+
+	.portfolio-item
+		width: 100%
+
+	.portfolio-work
+		width: 100%
+		margin-bottom: 0
+
+	.portfolio-content
+		margin-bottom: 0
+
+	.team-info
+		text-align: center	
+	
+	.team-carousel
+		.slick-list
+			margin-bottom: 15px
+
+	.team__photo
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 30px
+
+	.team-info__basic
+		&::after
+			right: 0
+
+	.team-skills__item
+		margin-left: auto
+		margin-right: auto
+
+	.testis
+		padding: 25px 10px
+
+	.testimonials
+		.slick-list
+			margin-bottom: 20px
+
+	.blog
+		text-align: center
+
+	.blog-header
+		margin-bottom: 50px
+
+	.blogs-header
+		margin-bottom: 15px
+
+	.blogs
+		.slick-list
+			margin-bottom: 10px
+
+	.subscribe-form
+		flex-wrap: wrap
+
+	.subscribe-form__item
+		max-width: 100%
+		margin-right: 0
+		margin-bottom: 15px
+
+	.subscribe-button
+		min-width: 60%
+
+	.contact-top
+		padding-bottom: 0
+
+	.contact-form__head
+		margin: 0
+
+	.contact-form__item
+		width: 100%
+		margin-left: 0
+		margin-right: 0
+		margin-bottom: 15px
+
+// ≥576px
++media-breakpoint-up(sm)
+
+	.blogs
+		.slick-dots
+			display: flex
+			flex-direction: column
+			width: initial
+			position: absolute
+			transform: translateY(-50%)
+			top: 25%
+			left: 100%
+			bottom: initial
+			li
+				margin-bottom: 15px
+
+// ≥768px
++media-breakpoint-up(md)
+
+// ≥992px
++media-breakpoint-up(lg)
+
+	.header
+		height: initial
+		min-height: 740px
+
+	.nav
+		display: block !important
+
+// ≥1200px
++media-breakpoint-up(xl)

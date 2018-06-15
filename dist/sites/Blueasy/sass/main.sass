@@ -1,0 +1,586 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,600,700')
+
+//layout
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "mixins"
+@import "adjustment"
+@import "normalize"
+@import "icomoon"
+
+/* ===== PRELOADER ===== */
+.loader
+	background: none repeat scroll 0 0 lighten($gray-color, 5%)
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader-inner
+		width: 75px
+		height: 75px
+		position: absolute
+		left: 50%
+		top: 50%
+		border-radius: 50%
+		margin-left: -37.5px
+		margin-top: -37.5px
+		border-top: 8px solid $accent
+		border-right: 8px solid $accent
+		border-left: 8px solid #fff
+		border-bottom: 8px solid #fff
+		animation: 1s spin infinite linear
+
+@keyframes spin
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)
+
+
+/* ===== HEADER ===== */
+
+.header
+	min-height: 600px
+	height: 100vh
+	display: flex
+	flex-direction: column
+
+.navbar
+	padding: 30px 0
+	position: fixed
+	z-index: 100
+	width: 100%
+	background-color: rgba($gray-color, .85)
+	.flex-container
+		justify-content: space-between
+		align-items: center
+
+.logo
+	display: block
+	font-size: rem(30px)
+	line-height: 1.2
+	color: #fff
+	text-transform: uppercase
+	font-weight: 700
+
+.sandwich
+	display: none
+	position: relative
+	width: 60px
+	height: 60px
+	background-color: transparent
+	outline: 0
+	border: 0
+	cursor: pointer
+
+.sandwich-active
+	.sandwich-middle
+		display: none
+
+	.sandwich-topper
+		transform: rotate(45deg)
+		top: 30px
+
+	.sandwich-bottom
+		transform: rotate(-45deg)
+		top: 30px
+
+.sandwich-item
+	position: absolute
+	width: 30px
+	height: 3px
+	top: 0
+	background-color: #fff
+	border-radius: 20px
+	left: 50%
+	margin-left: -15px
+
+.sandwich-topper
+	top: 20px
+	transition: transform 0.5s, top 0.2s
+
+.sandwich-middle
+	top: 30px
+
+.sandwich-bottom
+	top: 40px
+	transition: transform 0.5s, top 0.2s
+
+.navigation-list
+	display: flex
+	flex-wrap: wrap
+
+.navigation-list__item
+	text-transform: uppercase
+	letter-spacing: 1px
+
+.navigation-list__link
+	padding: 8px 19px
+	border: 2px solid transparent
+	transition: .2s
+	color: #fff
+	font-weight: 700
+	&:hover
+		border-color: $accent
+		color: $accent
+
+.header-content
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	text-align: center
+	height: 100%
+	width: 100%
+	display: flex
+	.flex-container
+		justify-content: center
+		margin: auto
+		position: relative
+	.title
+		padding-top: 15%
+
+.title-bg
+	display: inline-block
+	margin-bottom: 12px
+	background-color: $gray-color
+	padding: 4px 20px
+	&:last-of-type
+		margin-bottom: 0
+
+/* ===== SERVICES ===== */
+
+.services
+	background-color: $accent
+
+.services-wrap
+	flex-direction: column
+
+.services-list
+	display: flex
+	margin: 0 -17px -40px
+	margin-top: 40px
+	flex-wrap: wrap
+
+.services-list__item
+	width: calc(25% - 34px)
+	margin: 0 17px 40px
+	.icon-coffe
+		position: relative
+		left: -6px
+
+.service-icon
+	display: inline-block
+	font-size: rem(50px)
+	margin-bottom: 20px
+
+.services-text
+	p
+		font-size: rem(12px)
+		line-height: 1.5
+		font-weight: 300
+
+/* ===== PORTFOLIO ===== */
+.portofolio-topper
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	width: 100%
+	margin-bottom: 80px
+
+.tabs-wrapper
+	display: flex
+	flex-wrap: wrap
+	.active
+		color: $accent
+		border-color: $accent
+	.slick-dots
+		bottom: -35px
+		li
+			button
+				&:before
+					font-size: 25px
+
+.tab
+	color: $gray-color
+	text-transform: uppercase
+	cursor: pointer
+	padding: 6px 16px
+	border: 2px solid transparent
+	transition: .2s
+	font-weight: 700
+	margin-right: 20px
+	&:hover
+		color: $accent
+		border-color: $accent
+
+.portfolio-content
+	width: 100%
+
+.portfolio-item
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px -30px
+
+.portfolio-item__link
+	width: calc(25% - 30px)
+	height: 270px
+	background-color: #7D7D7D
+	position: relative
+	display: block
+	overflow: hidden
+	z-index: 1
+	margin: 0 15px 30px
+	&:hover
+		.portfolio-overlay
+			opacity: .9
+
+.portfolio-item__img
+	width: 100%
+	height: 100%
+	opacity: .8
+	filter: grayscale(100%)
+
+.portfolio-overlay
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 0
+	width: 100%
+	height: 100%	
+	background-color: $dimgray
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: opacity .2s
+
+.plus-icon
+	width: 32px
+	height: 32px
+	position: relative
+	span
+		display: inline-block
+		position: absolute
+		width: 32px
+		height: 3px
+		background-color: #fff
+		top: 50%
+		margin-top: -1.5px
+		left: 0
+
+.plus-topper
+	transform: rotate(90deg)
+	top: 2px
+
+/* ===== DEFAULT-SECTION ===== */
+.default-section
+	background-color: $gray-color
+	.flex-container
+		justify-content: space-between
+
+.default-description
+	width: 42%
+
+.default-description__text
+	p
+		margin: 30px 0
+
+.default-video
+	width: 50%
+	height: 315px
+	filter: grayscale(100%)
+	iframe
+		border: 0
+		width: 100%
+		height: 100%
+
+.default-btns
+	.button
+		display: inline-block
+		border: 2px solid $dimgray
+		color: $dimgray
+		background-color: transparent
+		padding: 9px 45px
+		font-size: rem(14px)
+		text-transform: uppercase
+		font-weight: 700
+		letter-spacing: 0
+		border-radius: 0
+		text-align: center
+		position: relative
+		outline: none
+		transition: background-color .1s ease
+		&:focus, &:hover 
+			text-decoration: none
+			color: #fff
+		&:hover 
+			background-color: $dimgray
+			&::after
+				opacity: .22
+		&:active 
+			background-color: $dimgray
+			&::after 
+				opacity: .32
+
+/* ===== TWITTER-SECTION ===== */
+.twitter-section
+	background-color: $accent
+
+.twitter-topper
+	display: flex
+	justify-content: space-between
+	width: 100%
+	margin-bottom: 35px
+	align-items: center
+	.svg-inline--fa
+		font-size: rem(30px)
+
+.blockqoute-text
+	margin: 0
+	font-size: rem(28px)
+	font-weight: 300
+
+.blockqoute-text__link
+	font-weight: 500
+	color: #fff
+
+/* ===== WHOIS-SECTION ===== */
+.whois-section
+	background-color: $dimgray
+	z-index: 1
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		background: url(../img/whois-section/bg.jpg) no-repeat center
+		background-size: cover
+		opacity: .5
+		z-index: 0
+
+.whois-wrapper
+	position: relative
+	z-index: 1
+
+.whois-content
+	display: flex
+	justify-content: space-between
+	margin: 35px -25px -30px
+	p
+		margin: 0 0 30px 0
+
+.whois-content__left, .whois-content__right
+	width: 50%
+	margin: 0 25px
+
+.socials
+	display: flex
+	flex-wrap: wrap
+	margin-right: -20px
+	margin-bottom: -20px
+	position: relative
+
+.socials__item
+	margin-right: 20px
+	margin-bottom: 20px
+
+.socials__link
+	width: 64px
+	height: 64px
+	border: 2px solid #fff
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: .2s
+	.svg-inline--fa
+		font-size: rem(30px)
+		color: #fff
+		transition: .2s
+	&:hover
+		border-color: $accent
+		.svg-inline--fa
+			color: $accent
+
+/* ===== TESTIMONIALS ===== */
+.testimonials
+	color: $gray-color
+	.blockqoute-text
+		margin-bottom: 25px
+
+.testimonials-topper
+	display: flex
+	justify-content: space-between
+	width: 100%
+	margin-bottom: 35px
+	align-items: center
+	.svg-inline--fa
+		font-size: rem(30px)
+
+.author
+	color: $accent
+	font-weight: 700
+	font-style: normal
+
+/* ===== CONTACT ===== */
+.contact
+	background-color: $gray-color
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-image: url(../img/contact/bg.jpg)
+		background-repeat: no-repeat
+		background-position: center
+		opacity: .35
+		filter: grayscale(100%)
+	.h2
+		width: 100%
+		margin-bottom: 40px
+
+.contact-wrapper
+	z-index: 1
+	position: relative
+
+.contact-form
+	display: flex
+	flex-direction: column
+	.button
+		max-width: 370px
+
+.contact-form-topper
+	display: flex
+	justify-content: space-between
+	margin-bottom: 35px
+
+.contact-form-bottom
+	display: flex
+	flex-direction: column
+
+.contact-form-inputs
+	display: flex
+	width: 40%
+	flex-direction: column
+
+.contact-form-info
+	display: flex
+	flex-direction: column
+	width: 50%
+	p
+		&:last-of-type
+			margin-bottom: 35px
+
+.contact-form__label
+	display: block
+	font-weight: 600
+	text-transform: uppercase
+
+.contact-form__input, .contact-form__textarea
+	background-color: transparent
+	outline: 0
+	border: 2px solid #fff
+	padding: 16px
+	color: #fff
+	font-weight: 400
+	
+.contact-form__input
+	margin-bottom: 35px
+	&:last-of-type
+		margin-bottom: 0
+
+.site-address
+	font-style: normal
+
+.site-address__link
+	display: block
+	color: #fff
+	&:hover
+		text-decoration: underline
+
+.contact-form__textarea
+	resize: none
+	min-height: 220px
+	margin-bottom: 40px
+
+/* ===== FOOTER ===== */
+.footer
+	padding-top: 75px
+	padding-bottom: 75px
+	background-color: $dimgray
+	.flex-container
+		justify-content: space-between
+		align-items: center
+
+.footer-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -14px
+
+.footer-list__item
+	&:last-of-type
+		.footer-list__link
+			&:after
+				content: ''
+
+.footer-list__link
+	color: $gray-color
+	text-transform: uppercase
+	font-size: rem(12px)
+	line-height: 2
+	padding: 0 14px
+	position: relative
+	transition: .15s
+	&:hover
+		color: #000
+	&:after
+		content: '|'
+		position: absolute
+		top: -4px
+		right: 0
+
+.copyright
+	color: $gray-color
+	display: flex
+	align-items: center
+	.svg-inline--fa
+		font-size: rem(12px)
+		margin-left: 2px
+
+/* scrollUp */
+#scrollUp
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background-color: $accent
+	color: #fff
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: .2s
+	.svg-inline--fa
+		font-size: rem(25px)
+	&:hover
+		opacity: .75
+
+// media
+@import "media"

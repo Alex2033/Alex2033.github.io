@@ -1,0 +1,589 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700,800|Open+Sans')
+
+//layout
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "mixins"
+@import "adjustment"
+@import "normalize"
+
+
+/* ===== HEADER ===== */
+.header
+	position: absolute
+	width: 100%
+	left: 0
+	top: 30px
+	z-index: 100
+	font-family: $montserrat-font
+
+.logo
+	font-size: rem(30px)
+	text-transform: uppercase
+	color: #fff
+	font-weight: 700
+	font-family: $montserrat-font
+	&:hover
+		color: #fff
+
+.nav-list
+	display: flex
+	justify-content: flex-end
+	flex-wrap: wrap
+	margin-right: -40px
+
+.nav-list__item
+	text-transform: uppercase
+	margin-right: 40px
+	transition: .25s
+	.active
+		color: $accent
+
+.nav-list__link
+	font-size: rem(14px)
+	color: #fff
+	transition: .25s
+	&:hover
+		color: $accent
+
+.toggle-menu
+	background-color: transparent
+	outline: 0
+	width: 30px
+	height: 30px
+	position: relative
+	z-index: 200
+	border: none
+	display: none
+	cursor: pointer
+	span
+		display: block
+	&:focus, &:active
+		outline: 0
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 5px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	/*transition-delay: 0.2s, 0s */
+
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	/*transition-delay: 0.2s, 0s */
+
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.sandwich.active
+	.sw-topper
+		top: 8px
+		transform: rotate(45deg)
+	.sw-bottom
+		top: 6px
+		transform: rotate(-45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+/* ===== HERO ===== */
+.hero
+	font-family: $montserrat-font
+	.slick-slider
+		margin: 0
+	.slick-dots
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: initial
+		height: 100%
+		top: 0
+		right: 40px
+
+.slick-slide
+	outline: 0
+	user-select: text
+
+.slick-dots
+	bottom: initial
+	li
+		width: initial
+		height: initial
+		margin: 6px
+		button
+			width: 11px
+			height: 11px
+			border-radius: 50%
+			border: 1px solid #fff
+			padding: 0
+			&:before
+				display: none
+			&:hover
+				border-color: rgba($accent, .75)
+				background-color: rgba($accent, .75)
+	li.slick-active
+		button
+			border-color: $accent
+			background-color: $accent
+
+.hero-slider, .hero-slider__item
+	width: 100%
+	min-height: 100vh
+	@extend %bg-img
+	outline: 0
+	z-index: 2
+	color: #fff
+	position: relative
+
+.hero-slider__item
+	display: flex
+	top: 0
+	&:before
+		@extend %pseudo-overlay
+		background-color: rgba(#000, .84)
+		z-index: 1
+
+.hero-flex
+	height: 100%
+	top: 0
+	left: 0
+	position: absolute
+	z-index: 10
+	display: flex
+	z-index: 1
+	align-items: center
+	justify-content: center
+	width: 100%
+
+.hero-content
+	width: 90%
+	position: relative
+	text-align: center
+	z-index: 11
+
+.title
+	font-size: rem(61px)
+	line-height: 1.3
+	text-transform: uppercase
+	font-weight: 100
+	margin-bottom: 50px
+	strong
+		font-weight: 800
+		display: block
+
+.button
+	border-radius: 30px
+	letter-spacing: 0
+	font-size: rem(18px)
+	padding: 17px 55px
+	box-shadow: 0px 1px 15.12px 2.88px rgba(255, 102, 0, 0.45)
+	&:after
+		display: none
+
+/* ===== ABOUT ===== */
+.about
+	.h2
+		text-align: left
+		margin-bottom: 5px
+
+.about-text
+	margin-bottom: 40px
+	p
+		font-size: rem(16px)
+		line-height: 1.875
+
+.about-img
+	box-shadow: 0 0 30px 3px rgba(#000, .2)
+	position: relative
+
+/* ===== SERVICES ===== */
+.services
+	background-color: $gray
+
+.h3
+	font-size: rem(24px)
+	font-family: $montserrat-font
+	font-weight: 700
+	color: #000
+	text-transform: uppercase
+
+.services-wrapper
+	margin-bottom: -80px
+
+.services__item
+	display: flex
+	margin-bottom: 80px
+
+.services__item-icon
+	margin-left: 30px
+	margin-right: 50px
+	.svg-inline--fa
+		font-size: rem(55px)
+		color: $accent
+
+/* ===== TEAM ===== */
+.team
+	.slick-list
+		margin: 0 -15px 35px
+	
+	.slick-slide
+		margin: 0 15px
+
+	.slick-dots
+		li
+			button
+				border-color: #CDCDCD
+				&:hover
+					border-color: rgba($accent, .75)
+					background-color: rgba($accent, .75)
+		li.slick-active
+			button
+				border-color: $accent
+				background-color: $accent
+
+.team-carousel__item
+	text-align: center
+	font-family: $montserrat-font
+	&:hover
+		.overlay
+			opacity: .8
+
+.team-carousel__photo
+	filter: grayscale(100%)
+	min-height: 276px
+	@extend %bg-img
+	position: relative
+	margin-bottom: 30px
+
+.team-carousel__name
+	font-size: rem(24px)
+	font-weight: 600
+	color: #000
+
+.team-carousel__job
+	color: #666
+	font-size: rem(20px)
+	font-weight: 600
+
+.overlay
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	transition: .2s opacity
+	background-color: #000
+	opacity: 0
+	display: flex
+	align-items: center
+	justify-content: center
+
+.socials
+	display: flex
+	margin-right: -25px
+
+.socials__item
+	margin-right: 25px	
+
+.socials__link
+	color: #fff
+	font-size: rem(25px)
+	transition: .2s
+
+/* ===== PORTFOLIO ===== */
+
+.portfolio
+	background-color: $gray
+	.slick-dots
+		bottom: -30px
+		li
+			button
+				border-color: #CDCDCD
+				&:hover
+					border-color: rgba($accent, .75)
+					background-color: rgba($accent, .75)
+		li.slick-active
+			button
+				border-color: $accent
+				background-color: $accent
+
+.works
+	display: flex
+	flex-wrap: wrap
+	margin: -15px
+
+.works__item
+	width: calc(33.33% - 30px)
+	margin: 15px
+
+.works__link
+	display: block
+	min-height: 276px
+	@extend %bg-img
+	transition: .2s opacity
+	&:hover
+		opacity: .8
+
+.portfolio__btns
+	margin-top: 60px
+	text-align: center
+
+/* overlay at start */
+.mfp-fade.mfp-bg 
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out
+  -moz-transition: all 0.15s ease-out
+  transition: all 0.15s ease-out
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready 
+  opacity: 0.8
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing 
+  opacity: 0
+
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content 
+  opacity: 0
+
+  -webkit-transition: all 0.15s ease-out
+  -moz-transition: all 0.15s ease-out
+  transition: all 0.15s ease-out
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+  opacity: 1
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+  opacity: 0
+
+.mfp-arrow, .mfp-arrow:focus, .mfp-arrow:active, .mfp-close, .mfp-close:focus, .mfp-close:active
+	outline: 0
+
+/* ===== BLOG ===== */
+
+.blog
+	.slick-list
+		margin-bottom: 15px
+	.slick-dots
+		li
+			button
+				border-color: #CDCDCD
+				&:hover
+					border-color: rgba($accent, .75)
+					background-color: rgba($accent, .75)
+		li.slick-active
+			button
+				border-color: $accent
+				background-color: $accent
+
+.blog-list
+	margin: 0 -15px
+
+.blog-list__item
+	margin: 0 15px
+
+.blog-list__link
+	color: $main-color
+	display: block
+	height: 100%
+	display: flex
+	flex-direction: column
+
+.blog-list__content
+	padding: 25px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	height: 100%
+
+.blog-list__description
+	margin-top: auto
+
+.blog-list__theme-name
+	font-family: $montserrat-font
+	color: #000
+	font-size: rem(20px)
+	font-weight: 600
+	margin-bottom: 20px
+
+.blog-list__img
+	min-height: 276px
+	@extend %bg-img
+
+.data
+	font-family: $montserrat-font
+	font-size: rem(14px)
+
+/* ===== TESTIMONIALS ===== */
+
+.testimonials
+	padding-top: 90px
+	padding-bottom: 60px
+	color: #fff
+	text-align: center
+	.h2
+		color: #fff
+	&:before
+		@extend %pseudo-overlay
+		background-color: rgba(#020303, .85)
+		z-index: 0
+
+.testimonials-wrapper
+	position: relative
+	z-index: 1
+
+.accent-light
+	font-weight: 300
+	color: $accent
+	display: block
+	font-size: rem(30px)
+	line-height: 1.6
+
+.testimonial-text
+	margin: 0 auto 40px auto
+	max-width: 945px
+
+.testimonials-list__item
+	margin-bottom: 30px
+
+.testimonials-list__img
+	@extend %bg-img
+	width: 90px
+	height: 90px
+	border-radius: 50%
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 25px
+
+.testimonials-list__name
+	font-size: rem(30px)
+	font-weight: 600
+	font-family: $montserrat-font
+
+.testimonials-list__job
+	font-family: $montserrat-font
+	font-size: rem(20px)
+	font-weight: 600
+
+/* ===== CLIENTS ===== */
+
+.clients
+	.slick-list
+		margin-bottom: 30px
+	.slick-dots
+		li
+			button
+				border-color: #CDCDCD
+				&:hover
+					border-color: rgba($accent, .75)
+					background-color: rgba($accent, .75)
+		li.slick-active
+			button
+				border-color: $accent
+				background-color: $accent
+
+.clients-list__item
+	display: block
+	transition: .2s opacity
+	img
+		margin-left: auto
+		margin-right: auto
+	&:hover
+		opacity: .8
+
+/* ===== CONTACT ===== */
+
+.contact
+	background-color: $gray
+
+@include placeholder
+	text-transform: uppercase
+	opacity: 1
+	font-size: 1rem
+
+.contact-form
+	text-align: center
+
+.contact-form__item
+	width: 100%
+	border-radius: 50px
+	padding: 12px 25px
+	border: 0
+	margin-bottom: 40px
+	outline: 0
+
+.contact-form__area
+	resize: none
+	min-height: 200px
+
+/* ===== MAP ===== */
+.map
+	padding-top: 0 !important
+	padding-bottom: 0 !important
+	height: 512px
+	width: 100%
+	filter: grayscale(100%)
+	iframe
+		width: 100%
+		height: 100%
+		border: 0
+
+/* ===== FOOTER ===== */
+
+.footer
+	background-color: #1B1A1A
+	padding: 75px 0
+	.socials
+		display: flex
+		margin-right: 0
+
+	.socials__item
+		margin-right: 40px
+		&:last-of-type
+			margin-right: 0
+
+	.socials__link
+		font-size: rem(30px)
+
+
+
+// media
+@import "media"

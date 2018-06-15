@@ -1,0 +1,271 @@
+@import "vars"
+
+@media (max-width: 480px)
+	/* ===== HEADER ===== */
+
+	.header-content
+		.title
+			padding-top: 0
+
+	/* ===== PORTFOLIO ===== */
+
+	.tab
+		font-size: rem(12px)
+		padding: 3px
+
+	/* ===== DEFAULT-SECTION ===== */
+	.default-video
+		display: none
+
+	div.default-btns
+		margin-bottom: 0
+
+	/* ===== TWITTER-SECTION ===== */
+	.twitter-topper
+		.svg-inline--fa
+			font-size: rem(23px)
+
+	.blockqoute-text
+		font-size: rem(20px)
+
+	/* ===== TESTIMONIALS ===== */
+	.blockqoute-text
+		text-align: center
+
+	.author
+		margin-left: auto
+		margin-right: auto
+
+	/* ===== FOOTER ===== */
+	.footer
+		padding: 50px 0
+
+	.footer-list
+		width: 100%
+		justify-content: center
+		margin-left: auto
+		margin-right: auto
+
+	.copyright
+		margin-left: auto
+		margin-right: auto
+
+	.footer-list__link
+		padding: 0 12px
+
+@media (max-width: 576px)
+	
+	/* ===== SERVICES ===== */
+	.services-list
+		flex-direction: column
+		align-items: center
+
+	li.services-list__item
+		width: 100%
+		max-width: 320px
+		margin: 0 0 40px
+
+	/* ===== PORTFOLIO ===== */
+	.portfolio-item, .portfolio-item__link
+		margin-bottom: 0
+
+	/* ===== TWITTER-SECTION ===== */
+	.blockqoute-text
+		line-height: 1.4
+
+	/* ===== WHOIS-SECTION ===== */
+	.whois-content
+		flex-wrap: wrap
+		text-align: center
+		.socials
+			top: 0
+			justify-content: center
+
+	.whois-content__left, .whois-content__right
+		width: 100%
+	
+	.socials__link
+		width: 55px
+		height: 55px
+
+	/* ===== CONTACT ===== */
+	.contact-form
+		text-align: center
+		.button
+			max-width: 160px
+			margin-left: auto
+			margin-right: auto
+
+	div.contact-form-info
+		flex-wrap: wrap
+		p
+			width: 100%
+
+	.site-address
+		width: 100%
+
+	.contact-form__textarea
+		min-height: 110px
+
+@media (max-width: 650px)
+
+	/* ===== HEADER ===== */
+	h1.title
+		font-size: rem(27px)
+
+
+@media (max-width: 767px)
+
+	/* ===== HEADER ===== */
+	.navbar
+		padding: 20px 0
+
+	.navigation
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 50
+		padding-top: 20px
+		padding-bottom: 20px
+		background-color: rgba(#000, .9)
+		width: 100%
+
+	.navigation-list__link
+		border: none
+		display: block
+		padding: 10px 0
+		&:hover, &:active, &:focus
+			color: #fff
+			background-color: rgba(#fff, .4)
+
+	.sandwich
+		display: block
+		z-index: 51
+
+	.navigation-list
+		display: block
+		text-align: center
+
+	.title
+		font-size: rem(35px)
+
+	/* ===== PORTFOLIO ===== */
+	.tab
+		margin: 0
+		text-align: center
+
+	.portfolio-item
+		.portfolio-item__link
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+
+	/* ===== TWITTER-SECTION ===== */
+	.twitter-topper
+		.h2
+			text-align: left
+			&:before
+				left: 0
+				margin-left: 0
+
+	/* ===== WHOIS-SECTION ===== */
+	ul.socials
+		top: 30px
+
+	/* ===== CONTACT ===== */
+	.contact-form-topper
+		flex-wrap: wrap
+
+	.contact-form-info
+		flex-direction: row
+		p
+			width: 60%
+			margin-top: 0
+
+	div.contact-form-inputs, div.contact-form-info
+		width: 100%
+
+	.contact-form-inputs
+		margin-bottom: 40px
+
+@media (max-width: 991px)
+	.h2
+		width: 100%
+		text-align: center
+		&:before
+			left: 50%
+			margin-left: -24.5px	
+
+	/* ===== SERVICES ===== */
+
+	.services-list__item
+		width: calc(50% - 34px)
+		text-align: center
+		.icon-coffe
+			left: 0
+
+	/* ===== PORTFOLIO ===== */
+	.portofolio-topper
+		justify-content: center
+		margin-bottom: 50px
+
+	.tabs-wrapper
+		width: 100%
+		justify-content: space-between
+		margin-top: 30px
+
+	a.portfolio-item__link
+		width: calc(50% - 30px)
+
+	/* ===== DEFAULT-SECTION ===== */
+	div.default-description
+		width: 100%
+		text-align: center
+	
+	div.default-video
+		width: 100%
+
+	.default-btns
+		margin-bottom: 40px
+
+	/* ===== WHOIS-SECTION ===== */
+	.socials
+		top: 10px
+
+	/* ===== CONTACT ===== */
+	.contact-form-inputs
+		width: 45%
+
+@media(max-width: 1200px)
+
+	/* ===== PORTFOLIO ===== */
+	.portfolio-item__link
+		width: calc(33.33% - 30px)
+
+	/* ===== DEFAULT-SECTION ===== */
+	.default-description
+		width: 38%
+	
+	.default-video
+		width: 55%
+
+
+@media (min-width: 576px)
+	.flex-container
+		max-width: 540px
+
+@media (min-width: 767px)
+	.flex-container
+		max-width: 720px
+
+	.navigation
+		display: block !important
+
+@media (min-width: 991px)
+	.flex-container
+		max-width: 960px
+
+@media (min-width: 1199px)
+	.flex-container
+		max-width: 1170px
