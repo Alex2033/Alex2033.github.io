@@ -1,0 +1,89 @@
+.appointment-section
+	padding-bottom: 150px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background-color: rgba(#0F0F0F, .73)
+		z-index: 1
+
+.appointment__shadow
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 2
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 50% 50%
+
+.appointment__wrapper
+	position: relative
+	z-index: 3
+
+.appointment-form
+	select
+		padding: 6px 5px
+		appearance: none
+	select::-ms-expand
+    	display: none
+
+.select-wrapper
+	position: relative
+	&::after
+		content: "▼"
+		position: absolute
+		top: 0
+		right: 0
+		font-size: 60%
+		line-height: 30px
+		padding: 0 7px
+		background: transparent
+		color: #8f8f8f
+
+.appointment-form__item
+	padding: 5px 10px
+	width: 100%
+	margin-bottom: 40px
+	font-size: 16px
+	line-height: 1.2
+	color: #8f8f8f
+	background-color: transparent
+	border: 0
+	border-bottom: 1px solid #C1C1C1
+	&:focus
+		outline: 0
+
+	@include placeholder
+		opacity: 1
+		color: #8f8f8f
+
+.appointment-form__textarea
+	min-height: 130px
+	resize: none
+
+.appointment-form__button
+	font-size: 20px
+	line-height: 72px
+	height: 72px
+	background-color: $accent
+	border: 2px solid darken($accent, 18%)
+	padding-left: 18px
+	padding-right: 18px
+	&:hover
+		background-color: lighten($accent, 5%)
+
+.date-wrap
+	position: relative
+	&::after
+		position: absolute
+		top: 0
+		color: #8f8f8f
+		right: 10px
+		content: '\f073'
+		font-family: 'FontAwesome'
+		font-size: 16px

@@ -1,0 +1,59 @@
+.pricing-section
+	background-color: #EFEFEF
+	padding-bottom: 150px
+
+.pricing-item
+	margin-bottom: 40px
+	max-width: 360px
+	margin-left: auto
+	margin-right: auto
+
+.pricing-item__gender
+	line-height: 72px
+	height: 72px
+	text-align: center
+	text-transform: uppercase
+	font-family: $alt-font
+	font-size: 24px
+	color: #fff
+
+.pricing-item__gender_color-dark
+	background-color: #303030
+
+.pricing-item__gender_color-accent
+	background-color: $accent
+
+.prices
+	padding: 45px 18px
+	background-color: #fff
+	margin-bottom: -20px
+	border-left: 1px solid #C6C6C6
+	border-right: 1px solid #C6C6C6
+
+.prices__item
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+
+.pricing-btn
+	height: 62px
+	line-height: 62px
+	display: block
+	text-transform: uppercase
+	font-size: 18px
+	font-family: $alt-font
+	&:active
+		transform: translateY(0)
+
+.pricing-btn_color-dark
+	background-color: #303030
+	border-color: #303030
+	&:hover
+		border-color: lighten(#303030, 7%)
+		background-color: lighten(#303030, 7%)
+
+.pricing-btn_color-accent
+	background-color: $accent
+	&:hover
+		border-color: lighten($accent, 7%)
+		background-color: lighten($accent, 7%)

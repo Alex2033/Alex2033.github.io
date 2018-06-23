@@ -1,0 +1,120 @@
+
+// NAVIGATION
+
+.navigation
+	background-color: rgba(#000, .25)
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 100
+	.container
+		position: static
+
+.toggle-menu
+	position: absolute
+	display: block
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 100
+	background-color: $accent
+	cursor: pointer
+	border: 0
+	display: none
+	outline: 0
+	transition: opacity .2s 
+	&:focus
+		outline: 0
+	&:hover
+		opacity: .9
+
+.toggle-menu__text
+	display: block
+	font-size: 21px
+	letter-spacing: 3px
+	font-family: $alt-font
+	color: #fff
+
+.sandwich
+	display: block
+	position: absolute
+	top: 50%
+	left: 2%
+	transform: translateY(-50%)
+	width: 35px
+	height: 35px
+	
+.sw
+	display: block
+	width: 28px
+	height: 2px
+	background-color: #fff
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	border-radius: 5px
+
+.sw-topper
+	top: 7px
+
+.sw-middle
+	top: 14px
+
+.sw-footer
+	top: 21px
+
+.nav-list
+	display: flex
+	flex-wrap: wrap
+
+.nav-list__link
+	letter-spacing: 1px
+	font-size: 20px
+	font-weight: 400
+	display: block
+	padding-left: 22px
+	padding-right: 22px
+	text-transform: uppercase
+	line-height: 76px
+	border-bottom: 2px solid transparent
+	color: $light
+	transition: background-color .25s, border-color .25s, color .25s
+	&:hover
+		background-color: rgba($accent, .25)
+		color: darken(#fff, 30%)
+		border-color: $accent
+
+// HERO-SLIDER
+
+.hero-slider
+	margin-bottom: -10px
+	
+.hero-slider__item
+	position: relative
+	min-height: 500px
+	height: 100vh
+
+.hero-slider__bg
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center top
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 0
+	filter: grayscale(100%)
+
+.hero-composition
+	width: 100%
+	position: absolute
+	z-index: 10
+	top: 50%
+	left: 0
+	transform: translateY(-50%)
+
+.hero-container
+	padding-left: 10%

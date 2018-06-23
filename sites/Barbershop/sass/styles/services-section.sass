@@ -1,0 +1,84 @@
+.services-top
+	padding-bottom: 145px
+
+.services__container
+	max-width: 1400px
+
+.services-bottom
+	position: relative
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+	padding-bottom: 50px
+	z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color: rgba(#fff, .82)
+		z-index: 2
+
+.services-bg__white
+	position: absolute
+	z-index: 3
+	top: -1px
+	left: 0
+	bottom: 0
+	right: 0
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
+.services-img
+	position: absolute
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+	left: 50%
+	bottom: 0
+	transform: translateX(-50%)
+	z-index: 5
+	width: 42%
+	padding-bottom: 50%
+
+.services__wrapper
+	position: relative
+	z-index: 10
+
+.services__item
+	margin-bottom: 100px
+	display: flex
+	align-items: center
+
+.services__item_left
+	text-align: right
+	.services__body
+		margin-right: 30px
+
+.services__item_right
+	text-align: left
+	.services__body
+		margin-left: 30px
+
+.services__body
+	flex-shrink: 1
+
+.services__icon
+	flex-shrink: 0
+	width: 90px
+	height: 90px
+	border: 1px solid $accent
+	border-radius: 50%
+	position: relative
+	svg
+		width: 53px
+		height: 53px
+		fill: $accent
+		position: relative
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		display: block

@@ -1,0 +1,17 @@
+.gallery
+	display: flex
+	flex-wrap: wrap
+
+.gallery__item
+	width: 20%
+	overflow: hidden
+
+.gallery__link
+	padding-bottom: 100%
+	display: block
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	transition: transform .5s
+	&:hover
+		transform: scale(1.2)

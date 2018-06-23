@@ -1,0 +1,32 @@
+.barbers
+	padding-bottom: 110px
+
+.barbers__header
+	margin-bottom: 40px
+
+.barber
+	text-align: center
+	line-height: 1.3333333333
+	margin-bottom: 40px
+	max-width: 365px
+	margin-left: auto
+	margin-right: auto
+	&:hover
+		.barber__img
+			filter: grayscale(0)
+
+.barber__img
+	background-size: cover
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	padding-bottom: 127%
+	filter: grayscale(100%)
+	margin-bottom: 25px
+	transition: filter .2s
+
+.barber__name
+	font-family: $alt-font
+	font-weight: 700
+	font-size: 24px
+	line-height: 1.2
+	margin-bottom: 15px

@@ -1,0 +1,93 @@
+.footer
+	padding-top: 70px
+	padding-bottom: 24px
+	background-color: $main-color
+	font-size: rem(14px)
+	line-height: 24px
+	overflow: hidden
+	color: $footer-color
+	.container
+		padding-left: 10px
+		padding-right: 10px
+
+.footer__primary
+	margin-bottom: 7px
+
+.footer__logo
+	font-size: rem(22px)
+	font-weight: 700
+	text-transform: uppercase
+	color: $gray
+
+.footer__title
+	font-size: rem(15px)
+	text-transform: uppercase
+	color: darken($gray, 7%)
+	font-weight: 600
+	margin-bottom: 12px
+
+.footer-menu__item
+	transition: .2s
+	&:hover
+		opacity: .7
+
+.footer-menu__link
+	color: $footer-color
+
+.contact-form
+	margin: 0 -15px
+	display: flex
+	flex-wrap: wrap
+
+.contact-form__item
+	width: calc(50% - 30px)
+	margin: 0 15px 20px
+	border: 0
+	border-bottom: 1px solid rgba(gray, .4)
+	background-color: transparent
+	outline: 0
+	color: $footer-color
+	@include placeholder
+		color: rgba($gray, 1)
+		text-transform: uppercase
+
+.message-input
+	width: 100%
+	min-height: 70px
+	border-top: none
+	padding-left: 0
+	padding-right: 0
+	resize: none
+
+.contact-form__btn
+	border: 0
+	cursor: pointer
+	margin: 0 15px
+	background-color: transparent
+	color: $footer-color
+	text-transform: uppercase
+	outline: 0
+	padding: 0
+	transition: .2s
+	&:hover
+		color: lighten($footer-color, 10%)
+
+.footer__secondary
+	border-top: 1px solid rgba(gray, .4)
+	padding-top: 16px
+
+.footer__links
+	padding-top: 14px
+	float: right
+	margin-right: -30px
+
+.footer__links-item
+	display: inline-block
+	margin-right: 30px
+
+.footer__link
+	text-transform: uppercase
+	color: lighten($footer-color, 3%)
+	transition: .2s
+	&:hover
+		opacity: .7

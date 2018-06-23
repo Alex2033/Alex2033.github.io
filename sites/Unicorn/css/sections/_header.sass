@@ -1,0 +1,234 @@
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader-inner
+		background-image: url("../img/preloader.gif")
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		background-size: cover
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+.header
+	min-height: 1000px
+	height: 100vh
+	.active
+		display: block
+
+.top-line
+	padding-top: 50px
+	position: relative
+	z-index: 3
+
+.site-logo
+	text-transform: uppercase
+	font-size: rem(18px)
+	font-weight: 700
+	a
+		color: $main-color
+
+.main-nav
+	text-align: right
+	color: $main-color
+	text-transform: uppercase
+	margin-top: 2px
+
+.toggle-menu
+	background-color: transparent
+	outline: 0
+	width: 25px
+	height: 25px
+	margin-top: 4px
+	position: relative
+	float: right
+	border: none
+	display: none
+	cursor: pointer
+	span
+		display: block
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: $main-color
+	border: none
+	transition: transform 0.5s, top 0.2s
+	/*transition-delay: 0.2s, 0s */
+
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: 2px
+	background: $main-color
+	border: none
+	transition: transform 0.5s, top 0.2s
+	/*transition-delay: 0.2s, 0s */
+
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: 4px
+	background: $main-color
+	border: none
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.sandwich.active
+	.sw-topper
+		top: 11px
+		transform: rotate(45deg)
+	.sw-bottom
+		top: 8px
+		transform: rotate(-45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.main-nav__item
+	color: $main-color
+	font-weight: 700
+	margin-right: 20px
+	transition: .25s
+	&:last-child
+		margin-right: 0
+	&:hover
+		color: lighten($main-color, 25%)
+
+.flex-container
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	z-index: 1
+	display: flex
+	text-align: right
+
+
+.header-composition
+	position: relative
+	margin: auto
+	padding-top: 10%
+
+.site-title
+	font-weight: 900
+	text-transform: uppercase
+	font-size: rem(72px)
+	line-height: 1.4
+	position: relative
+	margin-bottom: 10px
+
+.header-divider
+	margin-top: -5px
+	margin-bottom: 35px
+	margin-left: auto
+	width: 138px
+	line-height: 0
+	height: 4px
+	background-color: lighten($main-color, 2%)
+
+.header-text
+	p
+		font-size: rem(18px)
+		&:last-child
+			margin-bottom: 50px
+
+.header-button
+	margin-bottom: 20px
+
+.button
+	&:focus
+		color: $main-color
+	&:hover
+		color: #fff	
+
+.popup-window
+	width: 290px
+	height: 420px
+	z-index: 100
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	margin-left: auto
+	margin-right: auto
+	display: none
+	background-color: $gray
+	border-radius: 40px
+	padding: 15px 35px
+	text-align: center
+
+.popup__title
+	font-style: italic
+	margin-bottom: 20px
+	font-size: rem(30px)
+
+.popup-label
+	float: left
+	color: $main-color
+	font-weight: 600
+
+.popup-input
+	width: 100%
+	border-radius: 10px
+	margin-bottom: 20px
+	outline: 0
+	padding: 0 10px
+	border: 1px solid $main-color
+
+.popup-button
+	border: 2px solid $main-color
+	outline: 0
+	border-radius: 8px
+	margin-top: 20px
+	cursor: pointer
+	color: $main-color
+	font-weight: 600
+	transition: .25s
+	width: 150px
+	background-color: transparent
+	&:hover
+		background-color: $main-color
+		color: $gray
+
+.bg-popup
+	display: none
+	position: fixed
+	height: 100%
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 99
+	background-color: rgba(#000, .7)

@@ -1,0 +1,62 @@
+.featured-articles
+	padding-top: 100px
+	padding-bottom: 130px
+	text-align: center
+
+.owl-stage, .owl-item
+	display: flex
+
+.featured-articles__text
+	p
+		&:last-child
+			margin-bottom: 100px
+
+.owl-carousel__item
+	color: $gray
+	padding: 65px 38px 52px
+	background-color: #222
+	margin-left: auto
+	margin-right: auto
+	display: flex
+	flex-direction: column
+	text-align: left
+	letter-spacing: 1px
+	transition: opacity .25s
+	&:hover
+		opacity: .95
+
+.owl-carousel__feature-category
+	text-transform: uppercase
+	font-size: rem(14px)
+	margin-bottom: rem(20px)
+
+.owl-carousel__text
+	font-size: rem(24px)
+	line-height: 1.375
+	margin-bottom: 45px
+	max-width: 265px
+
+
+.owl-carousel__author
+	margin-top: auto
+	display: flex
+	flex-wrap: wrap
+	line-height: 1.6
+	align-items: center
+
+.owl-carousel__author-img
+	width: 60px
+	height: 60px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	border-radius: 50%
+	background-color: $gray
+	margin-right: 15px
+
+.owl-carousel__author-info
+	display: flex
+	flex-direction: column
+	font-size: rem(14px)
+	font-weight: 600
+	text-transform: uppercase

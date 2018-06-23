@@ -1,0 +1,97 @@
+.about
+	padding-bottom: 50px
+	border-bottom: 2px solid #F0F0F0
+	margin-bottom: -100px
+
+.about-item
+	background-color: #F0F0F0
+	border: 2px solid #D5D3D3
+	border-radius: 1px
+	padding: 0 25px 25px
+	text-align: center
+	margin-bottom: 100px
+	max-width: 365px
+	margin-left: auto
+	margin-right: auto
+	transition: box-shadow .25s
+	&:hover
+		box-shadow: 0 0 12px 0 rgba(#000, .3)
+
+.about-item__icon
+	width: 102px
+	height: 102px
+	border: 2px solid $accent
+	border-radius: 50%
+	margin-left: auto
+	margin-right: auto
+	position: relative
+	margin-bottom: -28px
+	top: -51px
+	background-color: #fff
+	svg
+		fill: $accent
+		width: 60px
+		height: 60px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+.about-item__divider
+	width: 97px
+	height: 2px
+	background-color: $accent
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 30px
+
+// ADVANTAGES
+.advantages
+	position: relative
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+	padding-top: 50px
+	padding-bottom: 30px
+	z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color: rgba($dark, .88)
+
+.advantages__filter
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	filter: grayscale(100%)
+	z-index: 2
+
+.advantages__wrapper
+	position: relative
+	z-index: 5
+
+.advantages__item
+	text-align: center
+	margin-bottom: 20px
+
+.advantages__amount
+	font-size: 60px
+	font-weight: 700
+	font-family: $alt-font
+	line-height: 1.2
+	color: $accent
+	letter-spacing: 3px
+
+.advantages__name
+	font-size: 20px
+	line-height: 1.5
+	text-transform: uppercase
+	font-weight: 600
+	color: #fff
+	letter-spacing: 1px

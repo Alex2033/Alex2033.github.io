@@ -1,0 +1,73 @@
+.blog-section
+	padding-top: 110px
+	text-align: center
+
+.blog-list
+	margin-left: -15px
+	margin-right: -15px
+
+.blog-list__item
+	margin-bottom: 45px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.h3
+		margin-bottom: 29px
+
+	&:last-of-type
+		margin-bottom: 95px
+
+	&:nth-of-type(2n)
+		.blog-list__text
+			order: 2
+			margin-right: 0
+		.blog-list__img
+			order: 1
+			margin-right: 50px
+			margin-left: 0
+
+.blog-carousel__link
+	color: $main-color
+
+.blog-list__text
+	max-width: 440px
+	margin-left: auto
+	margin-right: auto
+	order: 1
+	p
+		line-height: 28px
+		color: lighten($main-color, 7%)
+
+.blog__time
+	font-size: rem(14px)
+	letter-spacing: 1px
+	color: lighten($main-color, 20.5%)
+
+.blog-list__img
+	max-width: 571px
+	order: 2
+	margin-left: 50px
+
+.blog-carousel__wrapper
+	padding-top: 70px
+	padding-bottom: 70px
+	background-color: $gray
+	
+	.container
+		position: relative
+
+.blog-carousel
+	overflow: hidden
+	.owl-nav
+		margin: 0
+		.owl-next
+			right: -2%
+			margin-top: rem(-20px)
+		.owl-prev
+			left: -4%
+			margin-top: rem(-20px)
+
+.blog-carousel__item
+	text-align: left
+	padding: 12px 19px
+	border-left: 6px solid $main-color
