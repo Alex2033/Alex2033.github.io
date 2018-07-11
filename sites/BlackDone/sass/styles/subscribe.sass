@@ -1,0 +1,66 @@
+.subscribe
+    padding-top: 75px
+    padding-bottom: 75px
+    text-align: center
+    color: #ffffff
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: rgba($dark, .68)
+
+.subscribe__title
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 39px
+    letter-spacing: 1px
+    margin-bottom: 25px
+
+.subscribe__subtitle
+    letter-spacing: 9px
+    font-size: 24px
+    transition: color .8s ease
+    font-family: $main-font
+    font-weight: 600
+    margin-bottom: 35px
+
+    &.animation
+        color: $accent
+
+.subscribe-form
+    max-width: 735px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+
+.subscribe-form__item
+    width: 100%
+    padding-left: 22px
+    padding-right: 200px
+    height: 60px
+    line-height: 60px
+    border: 2px solid #fff
+    letter-spacing: 1px
+    font-size: 26px
+    font-family: $alt-font
+    color: $light
+    font-weight: 300
+    background-color: transparent
+    position: relative
+
+    @include placeholder
+        opacity: 1
+
+.subscribe-form__button
+    position: absolute
+    top: 2px
+    right: 2px
+    height: 56px
+    line-height: 56px
+    font-size: 26px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 2px

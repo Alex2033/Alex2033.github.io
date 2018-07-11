@@ -1,0 +1,110 @@
+.header
+    height: 100vh
+    min-height: 600px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: rgba(#0a0a0a, .8)
+        z-index: 0
+    
+.header__top
+    position: fixed
+    top: 0
+    padding-top: 10px
+    width: 100%
+    z-index: 200
+    
+.header__top-container
+    position: static
+
+.logo
+    display: flex
+    text-transform: uppercase
+    color: #ffffff
+    font-size: 35px
+    font-weight: 700
+    font-family: $alt-font
+    &:hover
+        color: #fff
+
+.logo__span
+    display: block
+    margin-right: 3px
+
+.logo__strong
+    color: $accent
+
+.navigation-list
+    display: flex
+    justify-content: flex-end
+
+.navigation-list__item
+    &:not(:last-child)
+        margin-right: 5px
+
+.navigation-list__link
+    display: block
+    text-transform: uppercase
+    font-size: 16px
+    color: #ffffff
+    transition: color .35s ease
+    padding-left: 11px
+    padding-right: 11px
+    position: relative
+    font-family: $alt-font
+
+    @include half-borders
+    
+    &:hover, &:focus
+        color: $accent
+        outline: 0
+        &::before, &::after
+            width: 40%
+            height: 50%
+            opacity: 1
+
+.header-composition
+    position: relative
+    text-align: center
+
+.header-composition__text
+    color: $light
+    font-size: 30px
+    line-height: 1.5
+
+.header__bottom
+    position: absolute
+    bottom: 3%
+    left: 0
+    right: 0
+    text-align: center
+
+.down-anchor
+    display: inline-block
+    cursor: pointer
+    background-color: transparent
+    border: 0
+    animation: down-anchor 1.5s infinite
+    .fas
+        font-size: 30px
+        color: $light
+        transition: color .25s ease
+    &:hover, &:focus
+        outline: none
+        .fas
+            color: $accent 
+
+@keyframes down-anchor
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        transform: translateY(20px)

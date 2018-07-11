@@ -1,0 +1,51 @@
+// begin contact
+section.contact.section(style="background-image: url(img/contact/bg.jpg);")#contact
+    .container
+        header.section-header
+            .row
+                .offset-lg-1.col-lg-10.offset-md-0.col-md-12.col-sm-12
+                    h2.h2
+                        i.fab.fa-google-wallet
+                        | Contact us
+                    .section-subtitle-text
+                        p.
+                            Uaerat litora, taciti quaerat dolor ligula laoreet omnis aut scelerisque ex fuga platea eveniet pulvinar praesent molestiae maiores, quidem 
+                            cumque! some area deom test add here fo r omny demo chaeeking i this its better for your cuminss
+            .row.align-items-center
+                .col-lg-4.d-none.d-lg-block
+                    // begin contact-us
+                    .contact-us
+                        include ../modules/svg-triangles
+                        h3.contact-us__title Contact Us
+                        ul.contact-us__list.contact-info
+                            li.contact-info__item
+                                address.place
+                                    i.fas.fa-map-marker-alt
+                                    .contact-info__item--left
+                                        a(href="javascript:void(0);").contact-info__link
+                                            span 112, Salidapur iston, realay
+                                            span tower area road
+                            li.contact-info__item
+                                i.fas.fa-envelope
+                                .contact-info__item--left
+                                    a(href="mailto:info@xercurarea.com").contact-info__link info@xercurarea.com
+                                    a(href="mailto:xercurrar@gmail.com").contact-info__link xercurrar@gmail.com
+                            li.contact-info__item
+                                i.fas.fa-phone
+                                .contact-info__item--left
+                                    a(href="tel:+12345678123121").contact-info__link +1234 5678 123121
+                                    a(href="tel:+12315598112324").contact-info__link +123 15598 112324
+                    // end contact-us
+                .offset-lg-0.col-lg-8.offset-md-1.col-md-10.offset-sm-0.col-sm-12.col-12
+                    // begin contact-form
+                    form.contact-form
+                        h3.contact-form__title
+                            strong Send me
+                            |  what you want
+                        .contact-form__wrapper
+                            input(type="text" name="name" placeholder="Name" required).contact-form__item
+                            input(type="email" name="email" placeholder="Email" required).contact-form__item
+                            textarea(name="message" placeholder="Write Here" required).contact-form__item.contact-form__textarea
+                            button(type="submit").button.contact-form__button Send messages
+                    // end contact-form
+// end contact

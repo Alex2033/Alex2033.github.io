@@ -1,0 +1,39 @@
+.working-idea
+    padding-top: 100px
+    padding-bottom: 120px
+    text-align: center
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: rgba($dark, .95)
+
+.working-idea__title
+    text-transform: uppercase
+    font-size: 57px
+    color: $light
+    letter-spacing: 1px
+    font-weight: 600
+    margin-bottom: 10px
+
+.working-idea__subtitle
+    font-size: 18px
+    letter-spacing: 6px
+    text-transform: uppercase
+    font-weight: 600
+    margin-bottom: 30px
+    transition: color .5s ease
+
+    &.animation
+        color: $accent
+
+.working-idea__text
+    color: $light
+    margin-bottom: 35px
+
+.set-buttons__btn 
+    padding-left: 40px
+    padding-right: 40px

@@ -1,0 +1,15 @@
+// begin subscribe
+section.subscribe.section(style="background-image: url(img/subscribe/bg.jpg);")
+    .container
+        .row
+            .offset-lg-1.col-lg-10.offset-lg-0.col-md-12
+                h2.subscribe__title Subscribe for newsletter
+                h4.subscribe__subtitle You can get new newsletter for subsrive
+        .row
+            .offset-lg-2.col-lg-8.offset-lg-0.col-md-12
+                // begin subscribe-form
+                form.subscribe-form
+                    input(type="email" name="email" placeholder="Your Email" required).subscribe-form__item
+                    button(type="submit").button.subscribe-form__button Subscribe
+                // end subscribe-form
+// end subscribe

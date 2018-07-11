@@ -1,0 +1,147 @@
+.about
+    padding-top: 70px
+    padding-bottom: 40px
+    background-color: $black
+
+.about-content
+    margin-bottom: 70px
+
+.about__title
+    margin-bottom: 25px
+    color: #ffffff
+
+.about__video
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    position: relative
+    height: 0
+    padding-bottom: 75.5%
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: rgba($black, .4)
+
+    .triangle
+        transition: width .5s ease, height .5s ease
+
+        &.border-animation
+            width: 107%
+
+    .triangle-top
+        top: -16px
+        left: -16px
+
+    .triangle-bottom
+        bottom: -16px
+        right: -16px
+
+    
+
+.about__text
+    padding-left: 20px
+
+.play-button
+    width: 125px
+    height: 125px
+    border-radius: 50%
+    position: absolute
+    cursor: pointer
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border: 6px solid $accent
+    transition: border-color .2s ease, transform .1s ease
+    .fa
+        position: absolute
+        top: 50%
+        left: 55%
+        transform: translate(-50%, -50%)
+        font-size: 64px
+        color: $accent
+        transition: color .2s ease
+
+    &:hover
+        border-color: $light
+        .fa
+            color: $light
+
+    &:active
+        transform: translate(-50%, -48%)
+
+.video-window
+    position: fixed
+    z-index: 999
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    display: none
+
+.video-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background-color: rgba(#000, .8)
+
+.video-frame
+    z-index: 1001
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 65%
+    border: 0
+    height: 65%
+    min-width: 310px
+    min-height: 380px
+
+.award
+    max-width: 125px
+    margin-left: auto
+    margin-right: auto
+    background-color: $dark
+    position: relative
+    text-align: center
+    padding: 20px
+    margin-bottom: 30px
+    transform-style: preserve-3d
+    transition: transform .2s ease
+    &:hover
+        transform: translateY(-10px)
+
+    .triangle
+        transform: translateZ(-1px)
+
+    .triangle
+        transition: width .5s ease, height .5s ease
+
+        &.border-animation
+            width: calc(100% + 15px)
+
+.award__icon
+    margin-bottom: 15px
+    .fa
+        color: #ffffff
+        font-size: 30px
+
+.award__number
+    font-size: 25px
+    color: $accent
+    line-height: 1.2
+    margin-bottom: 8px
+
+.award__text
+    text-transform: uppercase
+    color: #ffffff
+    font-size: 20px
+    line-height: 1.2
+    letter-spacing: 0.5px
+    font-weight: 300

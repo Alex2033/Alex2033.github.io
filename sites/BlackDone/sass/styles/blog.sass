@@ -1,0 +1,96 @@
+.blog
+    padding-top: 70px
+    padding-bottom: 70px
+
+    @include heading-animation
+
+.blog__title
+    .fa
+        margin-right: 70px
+
+.blog-item
+    background-color: $black
+    position: relative
+    max-width: 315px
+    margin-bottom: 50px
+
+    .triangle
+        transition: width .5s ease, height .5s ease
+
+        &.border-animation
+            width: 107%
+        
+        polygon
+            transition: fill .25s ease
+
+    .triangle-top
+        top: -11px
+        left: -11px
+
+    .triangle-bottom
+        bottom: -11px
+        right: -11px
+
+    &:hover
+        .triangle
+            polygon
+                fill: lighten($accent, 10%)
+
+.blog-item__img
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    height: 0
+    padding-bottom: 76%
+
+.blog-item__body
+    padding: 14px 14px 28px
+
+.blog-item__link
+    color: #ffffff
+    transition: color .2s ease
+    &:hover
+        color: lighten($accent, 8%)
+
+.blog-item__title
+    font-size: 16px
+    font-weight: 600
+    color: #ffffff
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin-bottom: 10px
+
+.blog-panel
+    padding-left: 15px
+    display: flex
+    justify-content: space-between
+    border-top: 2px solid lighten($black, 5%)
+    border-bottom: 2px solid lighten($black, 5%)
+    margin-bottom: 12px
+
+.blog-panel__item
+    font-size: 12px
+    font-weight: 300
+    letter-spacing: 1px
+    .fa
+        margin-right: 6px
+        font-size: 14px
+
+.blog-item__text
+    padding-left: 5px
+    padding-right: 5px
+    color: #ffffff
+    p
+        margin-bottom: 20px
+
+.blog-item__jump-link
+    display: inline-block
+    padding-left: 5px
+    text-transform: uppercase
+    color: lighten($accent, 8%)
+    letter-spacing: 1px
+    font-size: 13px
+    font-family: $alt-font
+    transition: color .2s ease
+    &:hover
+        color: darken($accent, 5%)

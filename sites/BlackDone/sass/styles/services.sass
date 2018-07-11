@@ -1,0 +1,38 @@
+.services
+    padding-top: 70px
+    padding-bottom: 120px
+
+    @include heading-animation
+
+.services-wrap
+    position: relative
+    z-index: 1   
+
+.service-item
+    text-align: center
+    background-color: $black
+    padding: 30px 25px 20px
+    max-width: 400px
+    position: relative
+    margin-bottom: 7px
+    transform-style: preserve-3d
+    transition: transform .2s ease
+    &:hover
+        transform: translateY(-10px)
+
+    .triangle
+        transform: translateZ(-1px)
+        transition: width .5s ease, height .5s ease
+
+        &.border-animation
+            width: 100%
+
+.service-item__icon
+    margin-bottom: 35px
+    i
+        font-size: 60px
+        color: #ffffff
+
+.service-item__text
+    line-height: 1.93
+    padding-bottom: 35px

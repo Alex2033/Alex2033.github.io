@@ -1,0 +1,122 @@
+.contact
+    padding-top: 65px
+    padding-bottom: 100px
+
+    @include heading-animation
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba($black, .9)
+
+.contact-us
+    background-color: $accent
+    position: relative
+    max-width: 305px
+    padding: 25px 20px 50px 25px
+
+    .triangle
+        transition: width .5s ease, height .5s ease
+
+        &.border-animation
+            width: 107%
+
+        polygon
+            fill: #ffffff
+
+.contact-info__item, .place
+    display: flex
+    align-items: center
+    .fas
+        display: block
+        font-size: 23px
+        color: #ffffff
+        width: 40px
+        margin-left: -10px
+
+.contact-info__item
+    margin-bottom: 50px
+    opacity: 0
+    transition: opacity .8s ease
+
+    &.animation
+        opacity: 1 
+
+.place
+    margin: 0
+
+.contact-info__link
+    line-height: 1.5
+    display: block
+    letter-spacing: 1px 
+    text-align: left
+    font-weight: 300
+    color: #ffffff
+
+    &:hover, &:focus
+        color: #ffffff
+        text-decoration: underline
+
+    span
+        display: block
+
+        
+.contact-us__title
+    color: #ffffff
+    letter-spacing: 1px
+    font-size: 33px
+    font-weight: 700
+    margin-bottom: 55px
+
+.contact-info__item--left
+    padding-left: 12px
+    border-left: 2px solid #fff
+
+.contact-form__title 
+    color: #ffffff
+    letter-spacing: 2px
+    font-size: 40px
+    margin-bottom: 50px
+    font-weight: 600
+    
+    strong
+        opacity: 0
+        transition: opacity .8s ease
+        color: $accent
+
+        &.animation
+            opacity: 1
+
+.contact-form__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.contact-form__item
+    border: 1px solid #C6C4C4
+    border-radius: 3px
+    background-color: transparent
+    padding: 6px 8px
+    font-family: $alt-font 
+    color: #c6c4c4
+    width: 48%
+    margin-bottom: 20px
+
+    @include placeholder
+        opacity: 1
+
+    &:focus
+        border-color: $accent
+
+.contact-form__textarea
+    width: 100%
+    max-width: 100%
+    min-height: 140px
+
+.contact-form__button
+    padding-left: 25px
+    padding-right: 25px

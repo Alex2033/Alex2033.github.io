@@ -1,0 +1,70 @@
+// begin about
+section.about.section#about
+    // begin about-content
+    .about-content
+        .container
+                .row
+                    .col-lg-5.col-md-12
+                        .about__video(style="background-image: url(img/about/video.jpg)")
+                            include ../modules/svg-triangles
+                            .play-button
+                                i.fa.fa-play
+                    .col-lg-7.col-md-12
+                        .about__text
+                            h3.h3.about__title About us
+                            .section-text
+                                p.
+                                    II am Carl Watson.I am a web designer.Sed ut perspiciatis unde 
+                                    omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae 
+                                p.
+                                    II am Carl Watson.I am a web designer.Sed ut perspiciatis 
+                                    unde omnis iste natus error sit voluptatem accusantium doloremque 
+                                    laudantium, totam rem aperiam,
+                                p.
+                                    II am Carl Watson.I am a web designer.Sed ut perspiciatis unde  
+                                    veritatis et quasi architecto beatae
+    // end about-content
+
+    // begin awards
+    .awards
+        .container
+            .row
+                .col-md-3.col-sm-6.col-6
+                    .award
+                        include ../modules/svg-triangles
+                        .award__icon
+                            i.fa.fa-user
+                        .award__number 7643
+                        .award__text Clients
+                .col-md-3.col-sm-6.col-6
+                    .award
+                        include ../modules/svg-triangles
+                        .award__icon
+                            i.fa.fa-trophy
+                        .award__number 589
+                        .award__text Awards
+                .col-md-3.col-sm-6.col-6
+                    .award
+                        include ../modules/svg-triangles
+                        .award__icon
+                            i.fa.fa-suitcase
+                        .award__number 301
+                        .award__text Projects
+                .col-md-3.col-sm-6.col-6
+                    .award
+                        include ../modules/svg-triangles
+                        .award__icon
+                            i.fa.fa-star
+                        .award__number 6542
+                        .award__text Feedback
+    // end awards
+        
+    // begin video-overlay
+    .video-window
+        .video-overlay
+        iframe.video-frame(src="https://www.youtube.com/embed/j2G1IUpRiPY")
+    // end video-overlay
+    
+
+// end about

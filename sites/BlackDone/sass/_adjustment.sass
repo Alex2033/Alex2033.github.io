@@ -1,0 +1,292 @@
+// adjusment syles
+
+*
+	box-sizing: border-box
+	&:focus
+		outline: 1px solid $accent
+
+html, body
+	width: 100%
+	height: 100%
+
+body
+	min-width: 320px
+	font-size: 14px
+	line-height: 1.93
+	font-weight: 400
+	color: $main-color
+	font-family: $main-font
+	-webkit-font-smoothing: antialiased
+	background-color: $dark
+
+header, section
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+
+ul
+	padding: 0
+	margin: 0
+
+li 
+	list-style: none
+
+p
+	margin: 0
+
+.wrapper 
+	min-height: 100%
+	overflow: hidden
+	position: relative
+	width: 100%
+
+.container 
+	position: relative
+	z-index: 1
+	margin: 0 auto
+	max-width: 1170px
+
+img 
+	display: block
+	max-width: 100%
+	max-height: 100%
+
+h1, h2, h3, h4, h5, h6
+	margin-top: 0
+	margin-bottom: 0
+	font-weight: normal
+	line-height: 1.2
+	font-family: $alt-font
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	height: 44px
+	line-height: 44px
+	text-decoration: none
+	background-color: $accent
+	font-size: 14px
+	font-weight: 600
+	font-family: $alt-font
+	text-transform: uppercase
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease, transform
+	cursor: pointer
+	&:hover
+		background-color: lighten($accent, 5%)
+		color: $light
+	&:active
+		background-color: darken($accent, 5%)
+		transform: translateY(2px)
+
+.title
+	max-width: 800px
+	margin-left: auto
+	margin-right: auto
+	color: $light
+	text-transform: uppercase
+	font-size: 65px
+	font-family: $alt-font
+	line-height: 1.38
+	border-bottom: 3px solid $accent
+	padding-bottom: 30px
+	margin-bottom: 30px
+	position: relative
+	font-weight: 800
+	
+	span
+		display: block
+		transition: opacity 2s ease, transform 1.5s ease
+		transform: translateX(-60%)
+		opacity: 0
+
+	&.animation
+		span, .title__strong
+			transform: translateX(0px)
+			opacity: 1
+
+.title__strong
+	color: $accent
+	display: inline-block
+	padding-right: 13px
+	padding-left: 13px
+	background-color: #ffffff
+	border-radius: 10px
+	transition: opacity 2s ease, transform 1.5s ease
+	transform: translateX(100%)
+	opacity: 0
+
+.responsive-menu
+	display: none
+
+.toggle-btn
+	width: 30px
+	height: 30px
+	background-color: transparent
+	border: 0
+	display: inline-block
+	position: relative
+	cursor: pointer	
+	&:focus
+		outline: none
+	&:hover
+		.tgl
+			background-color: $accent
+
+	&.active
+		.tgl-topper
+			top: 26px
+			transform: rotate(45deg) translateX(-65%)
+		.tgl-bottom
+			top: 3px
+			transform: rotate(-45deg) translateX(-65%)
+		.tgl-footer
+			opacity: 0
+			top: 0
+			transform: rotate(180deg) translateX(-50%)
+
+.tgl
+	width: 25px
+	height: 2px
+	background-color: #ffffff
+	display: block
+	border-radius: 2px
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	transition: background-color .2s ease
+
+.tgl-topper
+	top: 7px
+	transition: transform 0.5s, top 0.2s
+
+.tgl-bottom
+	top: 15px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.tgl-footer
+	top: 23px
+
+.no-position
+	position: static
+
+.h2
+	font-weight: 900
+	font-family: $alt-font
+	font-size: 45px
+	text-transform: uppercase
+	position: relative
+	display: inline-block
+	padding: 15px 40px
+	margin-bottom: 30px
+
+	@include heading-borders
+
+	.fa, .fab
+		margin-right: 18px
+		font-size: 45px
+
+.h3
+	text-transform: uppercase
+	font-family: $alt-font
+	font-size: 40px
+
+.h4
+	font-size: 25px
+	font-weight: 600
+	color: $accent
+	text-transform: uppercase
+	letter-spacing: 0.5px
+	margin-bottom: 25px
+
+.section-header
+	text-align: center
+
+.section-subtitle-text
+	line-height: 1.93
+	margin-bottom: 65px
+
+.section-text
+	font-size: 16px
+    line-height: 1.6875    
+	p
+		margin-bottom: 25px
+
+.socials
+	display: flex
+	justify-content: center
+
+.socials__item
+	&:not(:last-child)
+		margin-right: 25px
+
+.socials__link
+	.fab
+		font-size: 21px
+
+.slick-slide
+	user-select: text
+	&:focus
+		outline: 0
+
+#scrollUp
+	bottom: 20px
+	right: 20px
+	width: 50px
+	height: 50px
+	position: fixed
+	z-index: 50
+	display: none
+	border-radius: 4px
+	background-color: $accent
+	justify-content: center
+	align-items: center
+	transition: .2s
+	cursor: pointer
+
+	.fas
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 25px
+		color: #ffffff
+
+	&:hover
+		opacity: .75
+
+.preloader
+	background: none repeat scroll 0 0 $dark
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+
+.loader
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+.spinner
+	width: 60px
+	height: 60px
+	background-color: $accent
+	animation: sk-rotateplane 1.2s infinite ease-in-out
+
+@keyframes sk-rotateplane
+	0% 
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+	50% 
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+	100% 
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)

@@ -1,0 +1,103 @@
+.testimonials
+    padding-top: 95px
+    padding-bottom: 95px
+    text-align: center
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: rgba($black, .9)
+
+.testimonials__title
+    text-transform: uppercase
+    font-size: 38px
+    font-weight: 800
+    color: #ffffff
+    letter-spacing: 0.5px
+    margin-bottom: 60px
+
+.testis
+    .slick-track
+        padding-top: 10px
+
+    .slick-dots
+        position: relative
+        top: 30px
+        bottom: initial
+        li
+            width: 16px
+            height: 16px
+            &:not(:last-child)
+                margin-right: 15px
+            button
+                display: block
+                border: 2px solid #fff
+                border-radius: 50%
+                width: 100%
+                height: 100%
+                background-color: transparent
+                &::before
+                    display: none
+            &.slick-active, &:hover
+                button
+                    border-color: $accent
+                    background-color: $accent
+    
+.testi
+    color: #ffffff
+
+.testi__img
+    width: 98px
+    height: 98px
+    position: relative
+    background-color: #ffffff
+    margin-left: auto
+    margin-right: auto
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: top
+    margin-bottom: 40px
+
+    .triangle
+        transition: width .5s ease, height .5s ease
+
+        &.border-animation
+            width: 105%
+            
+        polygon
+            fill: $red
+
+    .triangle-top
+        top: -4px
+        left: -4px
+
+    .triangle-bottom
+        bottom: -4px
+        right: -4px
+
+.testi__text
+    position: relative
+    font-size: 15px
+    line-height: 2
+    .fa
+        color: $accent
+        font-size: 25px
+
+    .fa-left
+        margin-right: 10px    
+    
+    .fa-right
+        margin-left: 10px
+
+.testi__author
+    font-family: $alt-font
+    font-size: 13px
+    font-weight: 700
+    font-style: italic
+    text-transform: uppercase
+    letter-spacing: 0.5px
+    

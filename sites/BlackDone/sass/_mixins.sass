@@ -1,0 +1,62 @@
+@mixin placeholder 
+	&::-webkit-input-placeholder  
+		@content
+	&:-moz-placeholder            
+		@content
+	&::-moz-placeholder           
+		@content
+	&:-ms-input-placeholder       
+		@content  
+	
+    
+@mixin half-borders
+    &::before, &::after
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        opacity: 0
+
+    &::before
+        top: 0
+        left: 0
+        border-top: 2px solid $accent
+        border-left: 2px solid $accent
+        transition: width .5s ease, height .5s ease, opacity .1s ease
+  
+    &::after
+        bottom: 0
+        right: 0
+        border-bottom: 2px solid $accent
+        border-right: 2px solid $accent
+        transition: width .5s ease, height .5s ease, opacity .1s ease
+
+@mixin heading-borders
+    &::before, &::after
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        opacity: 0
+
+    &::before
+        top: 0
+        left: 0
+        border-top: 8px solid $accent
+        border-left: 8px solid $accent
+        transition: width .5s ease, height .5s ease, opacity .1s ease
+  
+    &::after
+        bottom: 0
+        right: 0
+        border-bottom: 8px solid $accent
+        border-right: 8px solid $accent
+        transition: width .5s ease, height .5s ease, opacity .1s ease
+
+@mixin heading-animation
+    h2
+        &.animation
+            &::before, &::after
+                width: 40%
+                height: 100%
+                opacity: 1

@@ -1,0 +1,198 @@
+@import "vars"
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+    .responsive-menu
+        display: block
+        text-align: right
+
+    .navigation
+        display: none
+        min-height: 40px
+        max-height: 80vh
+        background-color: rgba(#000, .8)
+        position: absolute
+        top: 55px
+        right: 0
+        width: 60%
+
+    .navigation-list
+        display: block
+
+    .navigation-list__link
+        padding-left: 15px
+        padding-right: 15px
+        transition: background-color .2s ease
+
+        &::before, &::after
+            display: none
+
+        &:hover
+            background-color: darken($accent, 10%)
+            color: #ffffff
+
+    .navigation-list__link
+        padding-top: 12px
+        padding-bottom: 12px
+
+    .info__header
+        margin-top: 0
+
+    .service-item
+        margin-left: auto
+        margin-right: auto
+
+    .about
+        text-align: center
+
+    .about__text
+        padding-left: 0
+
+    .about__video
+        margin-bottom: 40px
+
+    .blog-item
+        margin-left: auto
+        margin-right: auto
+        max-width: 400px
+
+    .contact-form__button
+        margin-left: auto
+        margin-right: auto
+
+    .contact-form__title
+        margin-bottom: 25px
+
+// ≥768px
++media-breakpoint-down(sm)
+    .section
+        padding-top: 50px
+        padding-bottom: 50px
+
+    .title
+        font-size: 50px
+
+    .header-composition__text
+        font-size: 25px
+
+    .info
+        text-align: center
+
+    .info__img
+        margin-bottom: 40px
+
+    .info__text, .about__text
+        padding-left: 0
+
+
+
+// ≥576px
++media-breakpoint-down(xs)
+    .h2
+        font-size: 26px
+        padding-left: 20px
+        padding-right: 20px
+        .fa
+            font-size: 26px
+
+    .award
+        max-width: 150px
+
+    .tabs
+        margin-bottom: 40px
+        justify-content: space-around
+
+    .tabs__item
+        &:not(:last-child)
+            margin-right: 0
+
+    .tab-content
+        margin-bottom: -45px
+
+    .tab-content__img
+        margin-bottom: 45px
+
+    .working-idea__title
+        font-size: 47px
+
+    .working-idea__subtitle
+        margin-bottom: 15px
+
+    .blog__title
+        .fa
+            margin-right: 15px
+
+    .blog-item
+        text-align: center
+
+    .subscribe-form__item
+        padding-right: 22px
+
+    .subscribe-form__button
+        position: relative
+        width: 60%
+        height: 40px
+        line-height: 40px
+
+    .section-subtitle-text
+        margin-bottom: 40px
+
+    .contact-form__item
+        width: 100%
+
+    .footer
+        padding-top: 20px
+        padding-bottom: 20px
+        text-align: center
+
+    .footer__socials
+        justify-content: center
+
+    .copyright
+        font-size: 18px
+        margin-bottom: 10px
+
+// ≥375px
++media-breakpoint-down(xxs)
+    .title
+        font-size: 35px
+
+    .header-composition__text
+        font-size: 20px
+
+    .navigation
+        width: 90%
+
+    .clients-list__item
+        height: 200px
+
+    .testi__text
+        .fa
+            display: none
+
+    .blog-panel
+        padding-left: 0
+
+    .subscribe__title
+        font-size: 36px
+
+    .subscribe__subtitle
+        letter-spacing: 6px
+
+    .subscribe-form__button
+        width: 70%
+        font-size: 20px
+
+    .contact-form__title
+        font-size: 35px
+
+    #scrollUp
+        bottom: 10px
+        right: 10px
+
++media-breakpoint-up(lg)
+    .navigation
+        display: block !important

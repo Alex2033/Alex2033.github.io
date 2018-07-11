@@ -1,0 +1,71 @@
+.portfolio
+    padding-top: 80px
+    padding-bottom: 100px
+
+    @include heading-animation
+
+.tabs
+    display: flex
+    justify-content: center
+    margin-bottom: 65px
+    flex-wrap: wrap
+
+.tabs__item
+    display: inline-block
+    border: 0
+    background-color: transparent
+    cursor: pointer
+    font-family: $alt-font
+    color: #ffffff
+    letter-spacing: 0.5px
+    padding: 0 16px
+    position: relative
+
+    &:not(:last-child)
+        margin-right: 24px
+
+    @include half-borders
+    
+    &.active
+        &::before, &::after
+            width: 50%
+            height: 50%
+            opacity: 1
+
+    &:hover, &:focus
+        outline: 0
+        &::before, &::after
+            width: 50%
+            height: 50%
+            opacity: 1
+
+.tab-content
+    margin-bottom: -80px
+
+.tab-content__img
+    max-width: 600px
+    margin-left: auto
+    margin-right: auto
+    display: block
+    position: relative
+    height: 0
+    padding-bottom: 100%
+    background-size: 120% 100%
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    margin-bottom: 80px
+    transition: background-size .5s ease
+
+    &:hover, &:focus
+        background-size: 150% 130%
+    
+    &:focus
+        outline: 0
+
+    .triangle
+        transition: width .7s ease, height .7s ease
+
+        &.border-animation
+            width: 105%
+
+    
