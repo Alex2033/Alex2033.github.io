@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("body, .navigation").niceScroll({
+    $(".navigation").niceScroll({
 		horizrailenabled: false,
     });
 });
